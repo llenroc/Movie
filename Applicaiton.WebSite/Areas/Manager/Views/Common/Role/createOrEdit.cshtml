@@ -1,0 +1,49 @@
+﻿<div ng-controller="app.manager.role.createOrEdit as vm">
+    <form novalidate name="roleCreateOrEditForm" class="form-validation" role="form">
+        <div class="tab" data-ride="tab">
+            <ul class="tab-nav-list">
+                <li class="actived">
+                    <a>@L("RoleProperties")</a>
+                </li>
+                <li>
+                    <a>@L("Permissions")</a>
+                </li>
+            </ul>
+            <div class="tab-box">
+                <div class="tab-page show">
+                    <div class="form-group">
+                        <label class="form-group-key">@L("Name")</label>
+                        <div class="form-group-block">
+                            <div class="input-wrapper">
+                                <input type="text" name="name" ng-model="vm.role.name" required>
+                            </div>
+                        </div>
+                        <p class="validate-message error" ng-show="roleCreateOrEditForm.name.$error.required">@L("NameIsRequired")</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group-key">@L("DisplayName")</label>
+                        <div class="form-group-block">
+                            <div class="input-wrapper">
+                                <input type="text" name="displayName" ng-model="vm.role.displayName" required minlength="5">
+                            </div>
+                        </div>
+                        <p class="validate-message error" ng-show="roleCreateOrEditForm.displayName.$error.minlength">@L("DisplayNameIsMinlength5")</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group-key">@L("Default")</label>
+                        <div class="form-group-block">
+                            <div class="checkbox-switcher">
+                                <input type="checkbox" ng-model="vm.role.isDefault">
+                                <label><span class="on">@L("On")</span><span class="off">@L("Off")</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-page hide">
+                    <permission-tree edit-data="vm.permissionEditData"></permission-tree>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="button-text block primary" ng-click="vm.save()">@L("Save")</button>
+    </form>
+</div>

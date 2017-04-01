@@ -1,0 +1,29 @@
+﻿<div ng-controller="app.mobile.channelAgency.index as vm">
+    <div class="profile-block">
+        <div class="profile profile-colored">
+            <div class="avatar-box">
+                <img width="96" height="96" class="avatar" ng-src="{{vm.user.avatar}}">
+            </div>
+            <h5 class="name">{{vm.channelAgency.channelAgent.name}}</h5>
+        </div>
+    </div>
+    <div class="" ng-if="vm.channelAgency">
+        <div class="statistic-block clearfix">
+            <a class="statistic-item">
+                <label class="count">{{vm.channelAgency.depth}}</label>
+                <label class="name">@L("Depth")</label>
+            </a>
+            <a class="statistic-item">
+                <label class="count">{{vm.channelAgency.childCount}}</label>
+                <label class="name">@L("ChildCount")</label>
+            </a>
+        </div>
+    </div>
+    <div class="container" ng-if="!vm.channelAgency">
+        <div class="blank">
+            @L("YouArNotChannelAgency,PleaseApply")
+        </div>
+        <a class="button-text block primary" href="/Mobile/ChannelAgent/Index">@L("ApplyChannelAgency")</a>
+    </div>
+    
+</div>

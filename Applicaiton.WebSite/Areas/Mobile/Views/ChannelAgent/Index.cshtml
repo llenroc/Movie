@@ -1,0 +1,32 @@
+﻿<div ng-controller="app.mobile.channelAgent.index as vm">
+    <div class="blank" ng-if="!vm.channelAgents||!vm.channelAgents.length">@L("ThereIsNoItem")</div>
+    <ul class="channel-agent-list" ng-if="vm.channelAgents&&vm.channelAgents.length">
+        <li ng-repeat="channelAgent in vm.channelAgents">
+            <div class="channel-agent-header">
+                <h5 class="channel-agent-name"><label>{{channelAgent.name}}</label></h5>
+            </div>
+            <div class="channel-agent-wrapper">
+                <div class="channel-agent-box">
+                    <div class="channel-agent-info">
+                        <div class="info-item">
+                            <label class="info-key"><span class="info-icon icon-money"></span> @L("RebateRatio")</label>
+                            <div class="info-body">
+                                <span class="rebate-ratio">{{channelAgent.rebateRatio}}</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <label class="info-key"><span class="info-icon icon-upload"></span> @L("Price")</label>
+                            <div class="info-body">
+                                <label class="price"><span class="apply-price"><small>￥</small>{{channelAgent.price}}</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="channel-agent-footer">
+                <button class="button-text border radius" ng-click="vm.apply(channelAgent)" ng-if="vm.canApply(channelAgent)" ng-disabled="vm.isApplying">@L("Apply")</button>
+                <button class="button-text border radius" ng-click="vm.viewOrder(channelAgent)" ng-if="vm.isInApplying(channelAgent)">@L("Applying")</button>
+            </div>
+        </li>
+    </ul>
+</div>

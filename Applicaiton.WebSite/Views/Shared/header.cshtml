@@ -1,0 +1,86 @@
+﻿@using Infrastructure.Application.Navigation
+@using Infrastructure.Collections.Extensions
+@using Infrastructure.Extensions
+@using Application.WebSite.Views
+@model Application.WebSite.Models.Layout.HeaderViewModel 
+
+@helper ShowMenuItemRecursively(UserMenuItem menuItem, int currentLevel)
+{
+    <li class="@(menuItem.Name == Model.CurrentPageName ? "actived" : "") @(menuItem.Items.IsNullOrEmpty() ? "" : (currentLevel == 0 ? "dropdown" : "dropdown-submenu"))">
+        @if (menuItem.Items.IsNullOrEmpty())
+        {
+            if (!menuItem.Url.IsNullOrEmpty())
+            {
+                <a href="@(UrlChecker.IsRooted(menuItem.Url) ? menuItem.Url : (ApplicationPath + menuItem.Url))">@menuItem.DisplayName</a>
+            }
+            else
+            {
+                <a href="@ApplicationPath">@menuItem.DisplayName</a>
+            }
+        }
+        else
+        {
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                @menuItem.DisplayName
+            </a>
+            <ul class="dropdown-menu">
+                @foreach (var childMenuItem in menuItem.Items)
+                {
+                    @ShowMenuItemRecursively(childMenuItem, currentLevel + 1)
+                }
+            </ul>
+        }
+    </li>
+}
+<div class="page-header splited" ng-controller="app.home.layout.header as vm">
+    <div class="page-header-wrapper">
+		@if (!String.IsNullOrEmpty(Model.AppSettings.AppTitleLogo))
+		{
+			<img class="logo" src="@Model.AppSettings.AppTitleLogo">
+		}
+		else
+		{
+			<img class="logo" src="/Content/Images/title-logo.png">
+		}
+        <nav>
+            <ul>
+                @if (Model.Menu != null)
+                {
+                    foreach (var menuItem in @Model.Menu.Items)
+                    {
+                        @ShowMenuItemRecursively(menuItem, 0)
+                    }
+                }
+            </ul>
+        </nav>
+        <div class="dropdown-wripper dropdown-menu">
+            <a data-target="#dropdown_languages">
+                <span ng-class="vm.currentLanguage.icon"></span>
+                <span class="langname">{{vm.currentLanguage.displayName}}</span>
+                <i class="icon icon-angle-down dropdown-sign"></i>
+            </a>
+            <ul id="dropdown_languages" class="dropdown left hide dropdown-menu-list" data-ride="dropdown">
+                <li ng-repeat="language in vm.languages">
+                    <a href="/Localization/ChangeCulture?cultureName={{language.name}}">
+                        <i ng-class="language.icon"></i> <span>{{language.displayName}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown-wripper dropdown-menu">
+            <a class="user-block" data-target="#dropdown_user">
+                <div class="user-info">
+                    <h3>{{vm.getShownUserName()}}</h3>
+                    <h4 ng-if="vm.user.emailAddress">{{vm.user.emailAddress}}</h4>
+                </div>
+                <div class="user-avatar-box" ng-if="vm.isLogined">
+                    <img class="user-avatar" ng-src="{{vm.user.avatar}}">
+                </div>
+            </a>
+            <ul id="dropdown_user" class="dropdown dropdown-menu-list left hide" data-ride="dropdown">
+                <li ng-if="vm.isLogined"><a href="/Account/Logout">@L("Logout")</a></li>
+                <li ng-if="!vm.isLogined"><a href="/Account/Login">@L("Login")</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

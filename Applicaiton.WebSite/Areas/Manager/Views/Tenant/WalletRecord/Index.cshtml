@@ -1,0 +1,49 @@
+﻿<div ng-controller="app.manager.walletRecord.index as vm">
+    <div class="view-page-head">
+        <h1 class="view-page-title">
+            <span>@L("WalletRecords")</span> <small>@L("WalletRecordsHeaderInfo")</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="column-10">
+			<div class="responsive-table-container">
+				<table id="walletRecordTable" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>@L("SerialNumber")</th>
+							<th>@L("Avatar")</th>
+							<th>@L("Money")</th>
+							<th>@L("Type")</th>
+							<th>@L("Remark")</th>
+							<th>@L("PayType")</th>
+							<th>@L("PayStatus")</th>
+							<th>@L("FetchStatus")</th>
+							<th>@L("FailReason")</th>
+							<th>@L("CreationTime")</th>
+							<th>@L("LastModificationTime")</th>
+							<th>@L("Actions")</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="walletRecord in vm.walletRecords">
+							<td>{{walletRecord.serialNumber}}</td>
+							<td><img class="circle" height="24" ng-src="{{walletRecord.user.avatar}}" /></td>
+							<td>{{walletRecord.money}}</td>
+							<td>{{walletRecord.typeText}}</td>
+							<td>{{walletRecord.remark}}</td>
+							<td>{{walletRecord.payType}}</td>
+							<td>{{walletRecord.payStatusText}}</td>
+							<td>{{walletRecord.fetchStatusText}}</td>
+							<td>{{walletRecord.failReason}}</td>
+							<td>{{walletRecord.creationTime|momentFormat: 'YYYY-MM-DD HH:mm:ss'}}</td>
+							<td>{{walletRecord.lastModificationTime|momentFormat: 'YYYY-MM-DD HH:mm:ss'}}</td>
+							<td>
+								<a class="button-text danger border radius" ng-click="vm.delete($index)">@L("Delete")</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+.dialog{
+    box-shadow: 1px 1px 3px #ddd;
+    position: fixed;
+    top:40%;
+    left: 0;
+    width: 100%;
+    z-index: 999998;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+}
+@keyframes dialog-show {
+    0%  {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transform: translateY(-20%);
+        -moz-transform: translateY(-20%);
+        -ms-transform: translateY(-20%);
+        transform: translateY(-20%);
+    }
+    100% {
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes dialog-hide {
+    0% {
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transform: translateY(20%);
+        -moz-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+        transform: translateY(20%);
+    }
+}
+.dialog.hide{
+    visibility: hidden;
+    opacity: 0;
+    animation: dialog-hide 0.3s;
+    -moz-animation: dialog-hide 0.3s;	/* Firefox */
+    -webkit-animation: dialog-hide 0.3s;	/* Safari 和 Chrome */
+    -o-animation: dialog-hide 0.3s;	/* Opera */
+}
+.dialog.show{
+    visibility: visible;
+    opacity: 1;
+    animation: dialog-show 0.3s;
+    -moz-animation: dialog-show 0.3s;	/* Firefox */
+    -webkit-animation: dialog-show 0.3s;	/* Safari 和 Chrome */
+    -o-animation: dialog-show 0.3s;	/* Opera */
+}
+.dialog .header{
+    position: relative;
+    background-color: #71bc22;
+}
+.dialog .header .container{
+    padding: 1rem;
+}
+.dialog .container-responsive{
+    position: relative;
+}
+.dialog .header .title{
+    margin: 0;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    font-weight: bold;
+    color:#fff;
+}
+.dialog .header .button-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color:#333;
+    margin-top: 1rem;
+    color:#fff;
+}
+.dialog .header .button-close:hover{
+    background-color: #ddd;
+}
+.dialog .body .container{
+    padding: 1rem;
+}
+.dialog .footer{
+    background: #fff;
+    text-align: right;
+}
+.dialog .footer .container{
+    padding: 1rem;
+}
+.dialog.dialog-page{
+    top:0;
+    height:100%;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+}
+.dialog.dialog-page .body{
+    -webkit-box-flex:1;
+}

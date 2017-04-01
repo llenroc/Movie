@@ -1,0 +1,8 @@
+﻿.media-selector-list{
+
+}
+
+.thumbnails-list.media-selector-list .thumbnail {
+    background: #eee;
+    margin-bottom: 1rem;
+}

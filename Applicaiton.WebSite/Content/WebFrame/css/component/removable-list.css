@@ -1,0 +1,20 @@
+﻿ul.removable-list{
+    padding:0;
+    list-style-type:none;
+}
+ul.removable-list>li{
+    display:-webkit-box;
+    -webkit-box-align:center;
+    margin-bottom:10px;
+    background-color:#efefef;
+}
+ul.removable-list>li>.handler-box{
+    text-align: center;
+    padding: 0 20px;
+}
+ul.removable-list>li>.handler-box button{
+
+}
+ul.removable-list>li>.content{
+    -webkit-box-flex:1;
+}

@@ -1,0 +1,27 @@
+﻿.tab > ul.tab-nav-list {
+	border-bottom:none;
+	background-color:transparent;
+}
+.tab > ul.tab-nav-list > li > a {
+	background-color: #F0F1F4;
+    border-bottom: 3px #d8d9dc solid;
+	color:#253340;
+}
+.tab > ul.tab-nav-list > li.actived > a {
+	background-color: #8dbf35;
+    border-color: #8dbf35;
+    color: #fff;
+	position:relative;
+}
+.tab > ul.tab-nav-list > li.actived > a:after {
+	display:block;
+    border-color: #8dbf35 transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+    bottom: -19px;
+    content: "";
+    height: 0;
+    left: 20px;
+    position: absolute;
+    width: 0;
+}

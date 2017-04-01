@@ -1,0 +1,142 @@
+﻿<div ng-controller="app.manager.user.createOrEdit as vm">
+    <div class="tab" data-ride="tab">
+        <ul class="tab-nav-list">
+            <li class="actived">
+                <a>@L("UserInformations")</a>
+            </li>
+            <li>
+                <a>@L("Roles")</a>
+            </li>
+        </ul>
+        <div class="tab-box">
+            <div class="tab-page show">
+                <form>
+                    <input type="hidden" name="id" value="vm.user.id" />
+                    <div class="row">
+                        <div class="column-2 text-center">
+                            <div class="picture-uploader" picture-uploader path="vm.user.avatar" data-option-url="/Manager/Home/Upload">
+                                <input type="file" />
+                                <input type="hidden" name="avatar" ng-model="vm.user.avatar" />
+                                <img ng-src="{{vm.user.avatar}}" width="128" height="128" class="imageCircle" />
+                            </div>
+                        </div>
+                        <div class="column-8">
+                            <div class="form-group">
+                                <label class="form-group-key">@L("FullName")</label>
+                                <div class="form-group-block">
+                                    <div class="input-wrapper"><input type="text" disabled ng-model="vm.user.fullName"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("Name")</label>
+                                <div class="form-group-block">
+                                    <div class="input-wrapper"><input name="name" type="text" ng-model="vm.user.name"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("Surname")</label>
+                                <div class="form-group-block">
+                                    <div class="input-wrapper"><input name="surname" type="text" ng-model="vm.user.surname"></div>
+                                </div>
+                            </div>
+							<div class="form-group">
+								<label class="form-group-key">@L("NickName")</label>
+								<div class="form-group-block">
+									<div class="input-wrapper"><input name="nickName" type="text" ng-model="vm.user.nickName"></div>
+								</div>
+							</div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("UserName")</label>
+                                <div class="form-group-block">
+                                    <div class="input-wrapper"><input type="text" ng-model="vm.user.userName"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("EmailAddress")</label>
+                                <div class="form-group-block">
+                                    <div class="input-wrapper"><input name="emailAddress" type="text" ng-model="vm.user.emailAddress"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("IsSpreader")</label>
+                                <div class="form-group-block">
+                                    <div class="switcher">
+                                        <label><input type="radio" name="isSpreader" ng-value="true" ng-model="vm.user.isSpreader" required /><span>@L("Yes")</span></label>
+                                        <label><input type="radio" name="isSpreader" ng-value="false" ng-model="vm.user.isSpreader" required /><span>@L("No")</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("IsActive")</label>
+                                <div class="form-group-block">
+                                    <div class="switcher">
+                                        <label><input type="radio" name="isActive" ng-value="true" ng-model="vm.user.isActive" required /><span>@L("Yes")</span></label>
+                                        <label><input type="radio" name="isActive" ng-value="false" ng-model="vm.user.isActive" required /><span>@L("No")</span></label>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="form-group">
+								<label class="form-group-key">@L("IsHide")</label>
+								<div class="form-group-block">
+									<div class="switcher">
+										<label><input type="radio" name="isHide" ng-value="true" ng-model="vm.user.isHide" required /><span>@L("Yes")</span></label>
+										<label><input type="radio" name="isHide" ng-value="false" ng-model="vm.user.isHide" required /><span>@L("No")</span></label>
+									</div>
+								</div>
+							</div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("SetRandomPassword")</label>
+                                <div class="form-group-block">
+                                    <div class="switcher">
+                                        <label><input type="radio" name="setRandomPassword" ng-value="true" ng-model="vm.setRandomPassword" required /><span>@L("Yes")</span></label>
+                                        <label><input type="radio" name="setRandomPassword" ng-value="false" ng-model="vm.setRandomPassword" required /><span>@L("No")</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("SendActivationEmail")</label>
+                                <div class="form-group-block">
+                                    <div class="switcher">
+                                        <label><input type="radio" name="sendActivationEmail" ng-value="true" ng-model="vm.sendActivationEmail" required /><span>@L("Yes")</span></label>
+                                        <label><input type="radio" name="sendActivationEmail" ng-value="false" ng-model="vm.sendActivationEmail" required /><span>@L("No")</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-if="!vm.setRandomPassword">
+                                <div class="form-group">
+                                    <label class="form-group-key">@L("Password")</label>
+                                    <div class="form-group-block">
+                                        <div class="input-wrapper">
+                                            <input type="password" ng-model="vm.user.password"
+                                                    ng-required="!vm.user.id && !vm.setRandomPassword"
+                                                    maxlength="@Application.Authorization.Users.User.MaxPlainPasswordLength">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group-key">@L("ShouldChangePasswordOnNextLogin")</label>
+                                <div class="form-group-block">
+                                    <div class="switcher">
+                                        <label><input type="radio" name="shouldChangePasswordOnNextLogin" ng-value="true" ng-model="vm.user.shouldChangePasswordOnNextLogin" required /><span>@L("Yes")</span></label>
+                                        <label><input type="radio" name="shouldChangePasswordOnNextLogin" ng-value="false" ng-model="vm.user.shouldChangePasswordOnNextLogin" required /><span>@L("No")</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-page hide">
+                <div class="checkbox-list">
+                    <label class="checkbox" ng-repeat="role in vm.roles">
+                        <input type="checkbox" name="{{role.roleName}}" ng-model="role.isAssigned">
+                        <span class="check"></span>
+                        <span class="caption">{{role.roleDisplayName}}</span>
+                    </label>
+                </div>
+            </div>
+            <button class="button-text block" ng-click="vm.save()">@L("Save")</button>
+        </div>
+    </div>
+</div>

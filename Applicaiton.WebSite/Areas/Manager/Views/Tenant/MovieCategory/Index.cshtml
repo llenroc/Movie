@@ -1,0 +1,31 @@
+﻿<div ng-controller="app.manager.movieCategory.index as vm">
+    <div class="view-page-head">
+        <h1 class="view-page-title">
+            <span>@L("MovieCategorys")</span> <small>@L("MovieCategorysHeaderInfo")</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="column-10">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>@L("Title")</th>
+                        <th>@L("CreationTime")</th>
+                        <th>@L("Actions")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="movieCategory in vm.movieCategorys">
+                        <td>{{movieCategory.title}}</td>
+                        <td>{{movieCategory.creationTime}}</td>
+                        <td>
+                            <a class="button-text border small" ui-sref="movieCategory.edit/{{movieCategory.id}}">@L("Edit")</a>
+                            <a class="button-text danger border small" ng-click="vm.delete($index)">@L("Delete")</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a class="button-text primary block" ui-sref="movieCategory.create">@L("Create")</a>
+</div>

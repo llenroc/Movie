@@ -1,0 +1,66 @@
+<div ng-controller="app.manager.channel.channelAgent.createOrEdit as vm">
+    <form name="channelAgentCreateOrEditForm" novalidate>
+        <div class="tab" data-ride="tab">
+            <ul class="tab-nav-list">
+                <li class="actived">
+                    <a>@L("BaseInfo")</a>
+                </li>
+            </ul>
+            <div class="tab-box">
+                <div class="tab-page show">
+                    <div class="form-group">
+                        <label class="form-group-key">@L("Name")</label>
+                        <div class="form-group-block">
+                            <div class="input-wrapper">
+                                <input type="text" name="name" ng-model="vm.channelAgent.name" required>
+                            </div>
+                        </div>
+                        <p class="help-block error" ng-show="channelAgentCreateOrEditForm.name.$error.required">@L("NameIsRequired")</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group-key">@L("Level")</label>
+                        <div class="form-group-block">
+                            <div class="input-wrapper">
+                                <input type="text" name="level" ng-model="vm.channelAgent.level" required>
+                            </div>
+                        </div>
+                        <p class="help-block error" ng-show="channelAgentCreateOrEditForm.level.$error.required">@L("LevelIsRequired")</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group-key">@L("RebateRatio")</label>
+                        <div class="form-group-block">
+                            <div class="input-wrapper">
+                                <input type="text" name="rebateRatio" ng-model="vm.channelAgent.rebateRatio" required>
+                            </div>
+                        </div>
+                        <p class="help-block error" ng-show="channelAgentCreateOrEditForm.rebateRatio.$error.required">@L("RebateRatioIsRequired")</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group-key">@L("Price")</label>
+                        <div class="form-group-block">
+                            <div class="input-wrapper">
+                                <input type="text" name="price" ng-model="vm.channelAgent.price" required>
+                            </div>
+                        </div>
+                        <p class="help-block error" ng-show="channelAgentCreateOrEditForm.price.$error.required">@L("PriceIsRequired")</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group-key">@L("MasterQrcode")</label>
+                        <div class="form-group-block">
+                            <div class="picture-uploader"
+                                 picture-uploader
+                                 path="vm.channelAgent.masterQrcode"
+                                 data-option-url="/Manager/Home/Upload"
+                                 data-option-default-image="/Content/WebFrame/image/upload-picture.png">
+                                <img height="128" ng-src="{{vm.channelAgent.masterQrcode}}" />
+                                <input type="file" />
+                                <input type="hidden" name="MasterQrcode" ng-model="vm.channelAgent.masterQrcode" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button-text primary block" ng-click="vm.createOrEdit()" ng-disabled="channelAgentCreateOrEditForm.$invalid"><i class="icon-save"></i>@L("Save")</button>
+            </div>
+        </div>
+    </form>
+</div>

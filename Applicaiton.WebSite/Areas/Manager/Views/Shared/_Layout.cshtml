@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="height-full">
+@Html.Partial("_Head")
+<body ng-app="app">
+    <div class="page" ng-controller="app.manager.layout as vm">
+        @Html.Partial("Header")
+        <div class="page-content horizional-flex-box">
+            <div data-ng-include="'~/Areas/Manager/Views/Shared/SideNav.cshtml'" 
+                 data-ng-controller="app.manager.layout.sideNav as vm"></div>
+            <div class="vertical-flex-inherit container" busy-if="vm.isLoadingTemplate">
+              <div ui-view class="fade-in-up"></div>
+            </div>
+        </div>
+        @Html.Partial("SettingPage")
+    </div>
+</body>
+</html>

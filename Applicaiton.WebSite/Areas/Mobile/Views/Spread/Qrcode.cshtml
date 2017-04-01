@@ -1,0 +1,14 @@
+﻿<div class="" ng-controller="app.mobile.spread.qrcode as vm">
+	<div class="padding-10">
+		<div class="profileItem margin-bottom-10">
+			<div class="profileItemAvatarBox">
+				<img width="64" class="profileTtemAvatar imageCircle" ng-src="{{vm.user.avatar}}" />
+			</div>
+			<div class="profileItemBody">
+				<h5 class="profileItemName">{{vm.user.nickName}}</h5>
+				<h5 class="profileItemAdditionalProperty"><span class="value">{{vm.user.userName}}</span></h5>
+			</div>
+		</div>
+		<img class="width-full" ng-src="{{vm.qrcode}}" ng-if="vm.qrcode"/>
+	</div>
+</div>

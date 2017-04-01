@@ -1,0 +1,126 @@
+/* Active Animation */
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.loader-wraper{
+    position: relative;
+}
+.loader-wraper .loader {
+    position: absolute;
+    left: 50%;
+    margin-left: -32px;
+    top: 50%;
+    margin-top: -32px;
+}
+.loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    text-align: center;
+}
+.loader:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    border-color: rgba(255,255,255,.15);
+    border-radius: 100%;
+    border: 2px solid rgba(0,0,0,.1);
+}
+.loader:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    animation: loading .6s linear;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 0 0 1px transparent;
+    border-color: #fff transparent transparent;
+    width: 64px;
+    height: 64px;
+}
+.loader.text {
+    text-align: center;
+    font-style: normal;
+    padding-top: 76px;
+    color:#fff;
+    color: rgba(255,255,255,.9);
+    font-weight: bold;
+}
+.loader-wraper.light .loader.text{
+    color:#333;
+}
+
+.loading-icon{
+    display:block;
+    width:32px;
+    height:32px;
+    position:relative;
+}
+.loading-icon:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-color: rgba(255,255,255,.15);
+    border-radius: 100%;
+    border: 2px solid rgba(0,0,0,.1);
+}
+.loading-icon:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    animation: loading .6s linear;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 0 0 1px transparent;
+    border-color: #fff transparent transparent;
+    width: 32px;
+    height: 32px;
+}
+
+.loader-blue{
+
+}
+.loader-blue:after {
+    content: "";
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    display: inline-block;
+    margin: 1em 0 0 -13px;
+    width: 26px;
+    height: 26px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3L¡­c3LTAuMjk3LTMuMDgzLTAuODEyLTQuNDgyTDM2LjIwMywyMC45MDJ6Ii8+DQo8L3N2Zz4NCg==);
+    background-size: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation-duration: 0.74s;
+    animation-duration: 0.74s;
+    -webkit-animation-name: spin-forever;
+    animation-name: spin-forever;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}

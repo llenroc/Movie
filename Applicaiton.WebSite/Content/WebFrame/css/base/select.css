@@ -1,0 +1,23 @@
+﻿@charset 'utf-8';
+
+.box-select {
+    position: absolute;
+    top: 0;
+    height: 40rem;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border:0.1rem solid #ccc;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    /*display: none;*/
+}
+
+.box-select li {
+    list-style: none;
+    border-bottom: 0.1rem solid #ccc;
+    padding: 0.5rem;
+}
+.box-select li:last-child{
+    border-bottom: none;
+}

@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{428102E7-860E-41C9-B1A0-A52426DF19B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Application</RootNamespace>
+    <AssemblyName>Application.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Qiniu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Qiniu.7.0.0.0\lib\Net45\Qiniu.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Senparc.Weixin, Version=4.11.1.41322, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Senparc.Weixin.4.11.1\lib\net45\Senparc.Weixin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Senparc.Weixin.MP, Version=14.3.127.34461, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Senparc.Weixin.MP.14.3.127\lib\net45\Senparc.Weixin.MP.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationApplicationModule.cs" />
+    <Compile Include="Articles\End\ArticleForEndAppService.cs" />
+    <Compile Include="Articles\End\Dto\ArticleDto.cs" />
+    <Compile Include="Articles\End\IArticleForEndAppService.cs" />
+    <Compile Include="Articles\Front\ArticleForFrontAppService.cs" />
+    <Compile Include="Articles\Front\Dto\ArticleDto.cs" />
+    <Compile Include="Articles\Front\Dto\ArticleGetOutput.cs" />
+    <Compile Include="Articles\Front\Dto\ArticleHintInput.cs" />
+    <Compile Include="Articles\Front\Dto\ArticleLikeDto.cs" />
+    <Compile Include="Articles\Front\Dto\ArticleLikeInput.cs" />
+    <Compile Include="Articles\Front\IArticleForEndAppService.cs" />
+    <Compile Include="Auditing\Dto\AuditLogDto.cs" />
+    <Compile Include="Auditing\Dto\AuditLogGetAllInput.cs" />
+    <Compile Include="Auditing\IAuditLogAppService.cs" />
+    <Compile Include="Auditing\AuditLogAppService.cs" />
+    <Compile Include="Auditing\INamespaceStripper.cs" />
+    <Compile Include="Auditing\NamespaceStripper.cs" />
+    <Compile Include="Authorization\End\Users\Dto\GetUserFromUserNameInput.cs" />
+    <Compile Include="Authorization\Front\Dto\CommonUserForProfileDto.cs" />
+    <Compile Include="Authorization\Front\Dto\RankInfo.cs" />
+    <Compile Include="Authorization\Front\Dto\UserForRankDto.cs" />
+    <Compile Include="Authorization\Front\IUserForFrontAppService.cs" />
+    <Compile Include="Authorization\Front\UserForFrontAppService.cs" />
+    <Compile Include="Authorization\LoginResultTypeHelper.cs" />
+    <Compile Include="Authorization\End\Users\Dto\CreateOrUpdateUserInput.cs" />
+    <Compile Include="Authorization\End\Users\Profile\Dto\GetPasswordComplexitySettingOutput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\GetUserForEditOutput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\GetUserPermissionsForEditOutput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\UpdateUserPermissionsInput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\UserEditDto.cs" />
+    <Compile Include="Authorization\End\Users\Dto\UserRoleDto.cs" />
+    <Compile Include="Authorization\End\Users\Profile\Dto\ChangePasswordInput.cs" />
+    <Compile Include="Authorization\End\Users\Profile\IProfileAppService.cs" />
+    <Compile Include="Authorization\End\Users\Profile\ProfileAppService.cs" />
+    <Compile Include="BackgroundJob\BackgroundJobAppService.cs" />
+    <Compile Include="BackgroundJob\Dto\BackgroundJobListDto.cs" />
+    <Compile Include="BackgroundJob\IBackgroundJobAppService.cs" />
+    <Compile Include="Caching\CachingAppService.cs" />
+    <Compile Include="Caching\Dto\CacheDto.cs" />
+    <Compile Include="Caching\ICachingAppService.cs" />
+    <Compile Include="Channel\End\ChannelAgencyApplyForEndAppService.cs" />
+    <Compile Include="Channel\End\ChannelAgentForEndAppService.cs" />
+    <Compile Include="Channel\End\Dto\ChannelAgencyApplyDto.cs" />
+    <Compile Include="Channel\End\Dto\ChannelAgencyDto.cs" />
+    <Compile Include="Channel\End\ChannelAgencyForEndAppService.cs" />
+    <Compile Include="Channel\End\Dto\ChannelAgentForCreateOrEditDto.cs" />
+    <Compile Include="Channel\End\Dto\ChannelAgentDto.cs" />
+    <Compile Include="Channel\End\IChannelAgencyApplyForEndAppService.cs" />
+    <Compile Include="Channel\End\IChannelAgencyForEndAppService.cs" />
+    <Compile Include="Channel\End\IChannelAgentForEndAppService.cs" />
+    <Compile Include="Channel\Front\ChannelAgencyForFrontAppService.cs" />
+    <Compile Include="Channel\Front\Dto\ChannelAgencyApplyDto.cs" />
+    <Compile Include="Channel\Front\Dto\ChannelAgencyDto.cs" />
+    <Compile Include="Channel\Front\Dto\ChannelAgentDto.cs" />
+    <Compile Include="Channel\Front\ChannelAgentForFrontAppService.cs" />
+    <Compile Include="Channel\Front\Dto\CustomerGetAllInput.cs" />
+    <Compile Include="Channel\Front\Dto\MyChannelAgentInfo.cs" />
+    <Compile Include="Channel\Front\IChannelAgencyForFrontAppService.cs" />
+    <Compile Include="Channel\Front\IChannelAgentForFrontAppService.cs" />
+    <Compile Include="Chat\ChatAppService.cs" />
+    <Compile Include="Chat\Dto\ChatMessageDto.cs" />
+    <Compile Include="Chat\Dto\GetUserChatFriendsWithSettingsOutput.cs" />
+    <Compile Include="Chat\Dto\GetUserChatMessagesInput.cs" />
+    <Compile Include="Chat\Dto\MarkAllUnreadMessagesOfUserAsReadInput.cs" />
+    <Compile Include="Chat\IChatAppService.cs" />
+    <Compile Include="Common\CommonLookupAppService.cs" />
+    <Compile Include="Common\Dto\FindUsersInput.cs" />
+    <Compile Include="Common\ICommonLookupAppService.cs" />
+    <Compile Include="Configuration\Host\Dto\AppSettingsOutput.cs" />
+    <Compile Include="Configuration\Host\Dto\EmailSettingsEditDto.cs" />
+    <Compile Include="Configuration\Host\Dto\GeneralSettingsEditDto.cs" />
+    <Compile Include="Configuration\Host\Dto\HostSettingsEditDto.cs" />
+    <Compile Include="Configuration\Host\Dto\HostUserManagementSettingsEditDto.cs" />
+    <Compile Include="Configuration\Host\Dto\SendTestEmailInput.cs" />
+    <Compile Include="Configuration\Host\HostSettingsAppService.cs" />
+    <Compile Include="Configuration\Host\IHostSettingsAppService.cs" />
+    <Compile Include="Configuration\Tenant\Dto\ShopSettingsEditDto.cs" />
+    <Compile Include="Configuration\Tenant\Dto\SpreadSettingsEditDto.cs" />
+    <Compile Include="Configuration\Tenant\Dto\TenantSettingsEditDto.cs" />
+    <Compile Include="Configuration\Tenant\TenantSettingsAppService.cs" />
+    <Compile Include="Configuration\Tenant\ITenantSettingsAppService.cs" />
+    <Compile Include="CustomDtoMapper.cs" />
+    <Compile Include="CustomerInfos\CustomerInfoAppService.cs" />
+    <Compile Include="CustomerInfos\Dto\AddressDto.cs" />
+    <Compile Include="CustomerInfos\Dto\CustomerInfoCreateOrEditInput.cs" />
+    <Compile Include="CustomerInfos\Dto\CustomerInfoCreateOrEditOutput.cs" />
+    <Compile Include="CustomerInfos\Dto\CustomerInfoGetInput.cs" />
+    <Compile Include="CustomerInfos\Dto\CustomerInfoDto.cs" />
+    <Compile Include="CustomerInfos\ICustomerInfoAppService.cs" />
+    <Compile Include="Dto\PagedAndFilteredInputDto.cs" />
+    <Compile Include="Editions\Dto\CreateOrUpdateEditionDto.cs" />
+    <Compile Include="Editions\EditionAppService.cs" />
+    <Compile Include="Editions\Dto\EditionEditDto.cs" />
+    <Compile Include="Editions\Dto\EditionListDto.cs" />
+    <Compile Include="Editions\Dto\FlatFeatureDto.cs" />
+    <Compile Include="Editions\Dto\GetEditionForEditOutput.cs" />
+    <Compile Include="Editions\IEditionAppService.cs" />
+    <Compile Include="Expresses\Dto\ExpressCompanyDto.cs" />
+    <Compile Include="Expresses\ExpressCompanyAppService.cs" />
+    <Compile Include="Expresses\IExpressCompanyAppService.cs" />
+    <Compile Include="Expresses\Logistics\Dto\LogisticsInfoGetOutput.cs" />
+    <Compile Include="Expresses\Logistics\ILogisticsAppService.cs" />
+    <Compile Include="Expresses\Logistics\LogisticsAppService.cs" />
+    <Compile Include="Friendships\Dto\AcceptFriendshipRequestInput.cs" />
+    <Compile Include="Friendships\Dto\BlockUserInput.cs" />
+    <Compile Include="Friendships\Dto\CreateFriendshipRequestByUserNameInput.cs" />
+    <Compile Include="Friendships\Dto\CreateFriendshipRequestInput.cs" />
+    <Compile Include="Friendships\Dto\FriendshipDto.cs" />
+    <Compile Include="Friendships\Dto\UnblockUserInput.cs" />
+    <Compile Include="GlobalRebates\End\Dto\GlobalRebateDto.cs" />
+    <Compile Include="GlobalRebates\End\Dto\GlobalRebateCreateOrEditDto.cs" />
+    <Compile Include="GlobalRebates\End\GlobalRebateAppService.cs" />
+    <Compile Include="GlobalRebates\End\IGlobalRebateAppService.cs" />
+    <Compile Include="Group\Dto\ChannelAgencyCustomerGetAllInput.cs" />
+    <Compile Include="Group\Dto\CustomerDto.cs" />
+    <Compile Include="Group\Dto\CustomerGetAllInput.cs" />
+    <Compile Include="Group\GroupAppService.cs" />
+    <Compile Include="Group\IGroupAppService.cs" />
+    <Compile Include="IO\AppFileHelper.cs" />
+    <Compile Include="IO\EpPlusExcelExporterBase.cs" />
+    <Compile Include="IO\ExcelHelper.cs" />
+    <Compile Include="IO\FileDto.cs" />
+    <Compile Include="IO\QiniuFileHelper.cs" />
+    <Compile Include="IO\QiniuSettingProvider.cs" />
+    <Compile Include="Localization\Dto\ApplicationLanguageEditDto.cs" />
+    <Compile Include="Localization\Dto\ApplicationLanguageListDto.cs" />
+    <Compile Include="Localization\Dto\CreateOrUpdateLanguageInput.cs" />
+    <Compile Include="Localization\Dto\GetLanguageForEditOutput.cs" />
+    <Compile Include="Localization\Dto\GetLanguagesOutput.cs" />
+    <Compile Include="Localization\Dto\GetLanguageTextsInput.cs" />
+    <Compile Include="Localization\Dto\LanguageTextListDto.cs" />
+    <Compile Include="Localization\Dto\SetDefaultLanguageInput.cs" />
+    <Compile Include="Localization\Dto\UpdateLanguageTextInput.cs" />
+    <Compile Include="Localization\FamFamFamFlagsHelper.cs" />
+    <Compile Include="Localization\ILanguageAppService.cs" />
+    <Compile Include="Localization\LanguageAppService.cs" />
+    <Compile Include="Logging\Dto\GetLatestWebLogsOutput.cs" />
+    <Compile Include="Logging\IWebLogAppService.cs" />
+    <Compile Include="Logging\WebLogAppService.cs" />
+    <Compile Include="Members\MemberCardPackages\Dto\MemberCardPackageCreateInput.cs" />
+    <Compile Include="Members\MemberCardPackages\Dto\MemberCardPackageDto.cs" />
+    <Compile Include="Members\MemberCardPackages\IMemberCardPackageAppService.cs" />
+    <Compile Include="Members\MemberCardPackages\MemberCardPackageAppService.cs" />
+    <Compile Include="Members\MemberCard\Dto\MemberCenterMemberCardDto.cs" />
+    <Compile Include="Members\MemberCard\Dto\MemberCardDto.cs" />
+    <Compile Include="Members\MemberCard\IMemberCardAppService.cs" />
+    <Compile Include="Members\MemberCard\MemberCardAppService.cs" />
+    <Compile Include="Members\MemberLevels\Dto\MemberLevelCreateInput.cs" />
+    <Compile Include="Members\MemberLevels\Dto\MemberLevelDto.cs" />
+    <Compile Include="Members\MemberLevels\IMemberLevelAppService.cs" />
+    <Compile Include="Members\MemberLevels\MemberLevelAppService.cs" />
+    <Compile Include="Monitor\ISystemMonitorAppService.cs" />
+    <Compile Include="Monitor\SystemMonitorAppService.cs" />
+    <Compile Include="MovieCategorys\Dto\MovieCategoryCreateInput.cs" />
+    <Compile Include="MovieCategorys\Dto\MovieCategoryDeleteInput.cs" />
+    <Compile Include="MovieCategorys\Dto\MovieCategoryDto.cs" />
+    <Compile Include="MovieCategorys\Dto\MovieCategoryGetAllInput.cs" />
+    <Compile Include="MovieCategorys\Dto\MovieCategoryGetInput.cs" />
+    <Compile Include="MovieCategorys\Dto\MovieCategoryUpdateInput.cs" />
+    <Compile Include="MovieCategorys\Dto\SearchMovieCategoryInput.cs" />
+    <Compile Include="MovieCategorys\IMovieCategoryAppService.cs" />
+    <Compile Include="MovieCategorys\MovieCategoryAppService.cs" />
+    <Compile Include="Movies\Dto\MovieCreateInput.cs" />
+    <Compile Include="Movies\Dto\MovieDeleteInput.cs" />
+    <Compile Include="Movies\Dto\MovieDto.cs" />
+    <Compile Include="Movies\Dto\MovieForUserDto.cs" />
+    <Compile Include="Movies\Dto\MovieGetAllInput.cs" />
+    <Compile Include="Movies\Dto\MovieGetInput.cs" />
+    <Compile Include="Movies\Dto\MovieHintInput.cs" />
+    <Compile Include="Movies\Dto\MoviePictureDto.cs" />
+    <Compile Include="Movies\Dto\MovieUpdateInput.cs" />
+    <Compile Include="Movies\IMovieAppService.cs" />
+    <Compile Include="Movies\MovieAppService.cs" />
+    <Compile Include="MultiTenancy\Dto\GetTenantFeaturesForEditOutput.cs" />
+    <Compile Include="MultiTenancy\Dto\GetTenantsInput.cs" />
+    <Compile Include="MultiTenancy\Dto\TenantEditDto.cs" />
+    <Compile Include="MultiTenancy\Dto\UpdateTenantFeaturesInput.cs" />
+    <Compile Include="Net\MimeTypes\MimeTypeNames.cs" />
+    <Compile Include="Notifications\Dto\GetNotificationSettingsOutput.cs" />
+    <Compile Include="Notifications\Dto\GetNotificationsOutput.cs" />
+    <Compile Include="Notifications\Dto\GetUserNotificationsInput.cs" />
+    <Compile Include="Notifications\Dto\NotificationSubscriptionDto.cs" />
+    <Compile Include="Notifications\Dto\NotificationSubscriptionWithDisplayNameDto.cs" />
+    <Compile Include="Notifications\Dto\UpdateNotificationSettingsInput.cs" />
+    <Compile Include="Notifications\INotificationAppService.cs" />
+    <Compile Include="Notifications\NotificationAppService.cs" />
+    <Compile Include="Orders\Admins\BackgroundJobs\BatchShipJob.cs" />
+    <Compile Include="Orders\Admins\BackgroundJobs\BatchShipJobArgs.cs" />
+    <Compile Include="Orders\Admins\Dto\BatchShipInput.cs" />
+    <Compile Include="Orders\Admins\Dto\ChangePayMoneyOrderInput.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderCreateOrUpdateInput.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderCustomerInfoDto.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderCustomerInfoForOrderForExportDto.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderDto.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderEditInput.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderForEditOutput.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderForExportDto.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderItemDto.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderOfBatchShipInput.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderForShipOutput.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderGetAllInput.cs" />
+    <Compile Include="Orders\Admins\Dto\OrderGetInput.cs" />
+    <Compile Include="Orders\Admins\Dto\ProductForSpecificationDto.cs" />
+    <Compile Include="Orders\Admins\Dto\ShipOrderInput.cs" />
+    <Compile Include="Orders\Admins\Dto\SpecificationForOrderItemDto.cs" />
+    <Compile Include="Orders\Admins\Exporting\IOrderListExcelExporter.cs" />
+    <Compile Include="Orders\Admins\Exporting\OrderListExcelExporter.cs" />
+    <Compile Include="Orders\Admins\IOrderAdminAppService.cs" />
+    <Compile Include="Orders\Admins\OrderAdminAppService.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\OrderCustomerInfoDto.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\OrderDto.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\OrderGetAllInput.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\OrderGetInput.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\OrderItemDto.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\PayInput.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\PayOutput.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\ProductForSpecificationDto.cs" />
+    <Compile Include="Orders\Fronts\Common\Dto\SpecificationForOrderItemDto.cs" />
+    <Compile Include="Orders\Fronts\Common\IOrderAppService.cs" />
+    <Compile Include="Orders\Fronts\Products\Dto\BoughtItemInput.cs" />
+    <Compile Include="Orders\Fronts\Products\Dto\BoughtItemOutput.cs" />
+    <Compile Include="Orders\Fronts\ChannelAgencyApplys\ChannelAgencyApplyOrderAppService.cs" />
+    <Compile Include="Orders\Fronts\ChannelAgencyApplys\Dto\ChannelAgencyApplyOrderCreateInput.cs" />
+    <Compile Include="Orders\Fronts\ChannelAgencyApplys\Dto\ChannelAgencyApplyOrderDto.cs" />
+    <Compile Include="Orders\Fronts\MemberCardPackages\Dto\MemberCardPackageOrderCreateInput.cs" />
+    <Compile Include="Orders\Fronts\MemberCardPackages\Dto\MemberCardPackageOrderDto.cs" />
+    <Compile Include="Orders\Fronts\Products\Dto\OrderConfirmInput.cs" />
+    <Compile Include="Orders\Fronts\Products\Dto\OrderConfirmOutput.cs" />
+    <Compile Include="Orders\Fronts\Products\Dto\OrderCreateInput.cs" />
+    <Compile Include="Orders\Fronts\Dto\OrderCustomerInfoDto.cs" />
+    <Compile Include="Orders\Fronts\Dto\OrderDto.cs" />
+    <Compile Include="Orders\Fronts\Dto\OrderGetAllInput.cs" />
+    <Compile Include="Orders\Fronts\Dto\OrderGetInput.cs" />
+    <Compile Include="Orders\Fronts\Dto\OrderItemDto.cs" />
+    <Compile Include="Orders\Fronts\Dto\OrderItemOutput.cs" />
+    <Compile Include="Orders\Fronts\Dto\PayedCallbackInput.cs" />
+    <Compile Include="Orders\Fronts\Dto\PayInput.cs" />
+    <Compile Include="Orders\Fronts\Dto\PayOutput.cs" />
+    <Compile Include="Orders\Fronts\Dto\ProductForSpecificationDto.cs" />
+    <Compile Include="Orders\Fronts\Products\Dto\SpecificationForBoughtItemDto.cs" />
+    <Compile Include="Orders\Fronts\Dto\SpecificationForOrderItemDto.cs" />
+    <Compile Include="Orders\Fronts\ChannelAgencyApplys\IChannelAgencyApplyOrderAppService.cs" />
+    <Compile Include="Orders\Fronts\MemberCardPackages\IMemberCardPackageOrderAppService.cs" />
+    <Compile Include="Orders\Fronts\Products\IProductOrderAppService.cs" />
+    <Compile Include="Orders\Fronts\MemberCardPackages\MemberCardPackageOrderAppService.cs" />
+    <Compile Include="Orders\Fronts\Common\OrderAppService.cs" />
+    <Compile Include="Orders\Fronts\Products\ProductOrderAppService.cs" />
+    <Compile Include="Authorization\End\Permissions\Dto\FlatPermissionDto.cs" />
+    <Compile Include="Authorization\End\Permissions\Dto\FlatPermissionWithLevelDto.cs" />
+    <Compile Include="Authorization\End\Permissions\IPermissionAppService.cs" />
+    <Compile Include="Authorization\End\Permissions\PermissionAppService.cs" />
+    <Compile Include="Authorization\End\Permissions\PermissionManagerExtensions.cs" />
+    <Compile Include="Authorization\End\Roles\Dto\CreateOrUpdateRoleInput.cs" />
+    <Compile Include="Authorization\End\Roles\Dto\RoleDto.cs" />
+    <Compile Include="Authorization\End\Roles\Dto\RoleEditDto.cs" />
+    <Compile Include="Authorization\End\Roles\Dto\RoleForEditDto.cs" />
+    <Compile Include="Pay\IPayAppService.cs" />
+    <Compile Include="Pay\PayAppService.cs" />
+    <Compile Include="ProductCategorys\Fronts\Dto\ProductCategoryDto.cs" />
+    <Compile Include="ProductCategorys\Fronts\IProductCategoryForFrontAppService.cs" />
+    <Compile Include="ProductCategorys\Fronts\ProductCategoryForFrontAppService.cs" />
+    <Compile Include="ProductCategorys\Tenants\Dto\ProductCategoryCreateOrEditDto.cs" />
+    <Compile Include="ProductCategorys\Tenants\Dto\ProductCategoryDto.cs" />
+    <Compile Include="ProductCategorys\Tenants\Dto\ProductCategoryForEditOutput.cs" />
+    <Compile Include="ProductCategorys\Tenants\IProductCategoryForTenantAppService.cs" />
+    <Compile Include="ProductCategorys\Tenants\ProductCategoryForTenantAppService.cs" />
+    <Compile Include="Products\Fronts\Dto\ProductDto.cs" />
+    <Compile Include="Products\Fronts\Dto\ProductForOrderConfirmOutput.cs" />
+    <Compile Include="Products\Fronts\Dto\ProductForOrderListDto.cs" />
+    <Compile Include="Products\Fronts\Dto\ProductGetAllInput.cs" />
+    <Compile Include="Products\Fronts\Dto\ProductGetInput.cs" />
+    <Compile Include="Products\Fronts\Dto\ProductListDto.cs" />
+    <Compile Include="Products\Fronts\Dto\PropertyValueDto.cs" />
+    <Compile Include="Products\Fronts\Dto\SpecificationDto.cs" />
+    <Compile Include="Products\Fronts\Dto\SpecificationPropertyDto.cs" />
+    <Compile Include="Products\Fronts\Dto\SpecificationPropertyGroup.cs" />
+    <Compile Include="Products\Fronts\Dto\SpecificationPropertyValueDto.cs" />
+    <Compile Include="Products\Fronts\IProductForFrontAppService.cs" />
+    <Compile Include="Products\Fronts\ProductForFrontAppService.cs" />
+    <Compile Include="Products\Tenants\Dto\DistributionCreateOrEditInput.cs" />
+    <Compile Include="Products\Tenants\Dto\DistributionDto.cs" />
+    <Compile Include="Products\Tenants\Dto\ProductCreateOrEditInput.cs" />
+    <Compile Include="Products\Tenants\Dto\ProductCreateOrEditInputDto.cs" />
+    <Compile Include="Products\Tenants\Dto\ProductDto.cs" />
+    <Compile Include="Products\Tenants\Dto\ProductForCreateOrEditOutput.cs" />
+    <Compile Include="Products\Tenants\Dto\ProductForCreateOrEditOutputDto.cs" />
+    <Compile Include="Products\Tenants\Dto\SpecificationForCreateOrEditInput.cs" />
+    <Compile Include="Products\Tenants\Dto\SpecificationDto.cs" />
+    <Compile Include="Products\Tenants\Dto\SpecificationPropertyCreateOrEditDto.cs" />
+    <Compile Include="Products\Tenants\Dto\SpecificationPropertyDto.cs" />
+    <Compile Include="Products\Tenants\Dto\SpecificationPropertyValueDto.cs" />
+    <Compile Include="Products\Tenants\Dto\SpecificationPropertyValueForCreateOrEditDto.cs" />
+    <Compile Include="Products\Tenants\IProductForTenantAppService.cs" />
+    <Compile Include="Products\Tenants\ISpecificationPropertyForTenantAppService.cs" />
+    <Compile Include="Products\Tenants\ProductForTenantAppService.cs" />
+    <Compile Include="Products\Tenants\SpecificationPropertyForTenantAppService.cs" />
+    <Compile Include="Regions\Fronts\AddressForFrontAppService.cs" />
+    <Compile Include="Regions\Fronts\Dto\AddressDto.cs" />
+    <Compile Include="Regions\Fronts\Dto\AddressGetAllInput.cs" />
+    <Compile Include="Regions\Fronts\IAddressForFrontAppService.cs" />
+    <Compile Include="Sessions\Dto\ShopInformationsOutput.cs" />
+    <Compile Include="ShopCarts\Fronts\Dto\ProductForSpecificationDto.cs" />
+    <Compile Include="ShopCarts\Fronts\Dto\SetCountInput.cs" />
+    <Compile Include="ShopCarts\Fronts\Dto\ShopCartAddInput.cs" />
+    <Compile Include="ShopCarts\Fronts\Dto\ShopCartDto.cs" />
+    <Compile Include="ShopCarts\Fronts\Dto\ShopCartItemDto.cs" />
+    <Compile Include="ShopCarts\Fronts\Dto\SpecificationForShopCartItemDto.cs" />
+    <Compile Include="ShopCarts\Fronts\IShopCartForFrontAppService.cs" />
+    <Compile Include="ShopCarts\Fronts\ShopCartForFrontAppService.cs" />
+    <Compile Include="Spread\Front\SpreadPosters\Dto\SpreadPosterDto.cs" />
+    <Compile Include="Spread\Front\SpreadPosters\Dto\SpreadPosterOutput.cs" />
+    <Compile Include="Spread\Front\SpreadPosters\Dto\SpreadPosterTemplateDto.cs" />
+    <Compile Include="Spread\Front\SpreadPosters\ISpreadPosterAppService.cs" />
+    <Compile Include="Spread\Front\SpreadPosters\SpreadPosterAppService.cs" />
+    <Compile Include="Spread\End\SpreadPosterTemplates\Dto\CreateOrEditSpreadPosterTemplateDto.cs" />
+    <Compile Include="Spread\End\SpreadPosterTemplates\Dto\SpreadPosterGetInput.cs" />
+    <Compile Include="Spread\End\SpreadPosterTemplates\Dto\SpreadPosterTemplateDto.cs" />
+    <Compile Include="Spread\End\SpreadPosterTemplates\ISpreadPosterTemplateAppService.cs" />
+    <Compile Include="Spread\End\SpreadPosterTemplates\SpreadPosterTemplateAppService.cs" />
+    <Compile Include="Spread\Front\Dto\ShareGetAllInput.cs" />
+    <Compile Include="Spread\Front\Dto\ShareDto.cs" />
+    <Compile Include="Spread\Front\ISpreadAppService.cs" />
+    <Compile Include="Spread\Front\SpreadAppService.cs" />
+    <Compile Include="Tenants\Dashboard\Dto\CommonDateCount.cs" />
+    <Compile Include="Tenants\Dashboard\Dto\DashboardOutput.cs" />
+    <Compile Include="Tenants\Dashboard\Dto\OrderActivityOutput.cs" />
+    <Compile Include="Tenants\Dashboard\Dto\UserActivityOutput.cs" />
+    <Compile Include="Tenants\Dashboard\ITenantDashboardAppService.cs" />
+    <Compile Include="Tenants\Dashboard\TenantDashboardAppService.cs" />
+    <Compile Include="UserLoginAttempts\Dto\UserLoginAttemptDto.cs" />
+    <Compile Include="UserLoginAttempts\IUserLoginAttemptsAppService.cs" />
+    <Compile Include="UserLoginAttempts\UserLoginAttemptsAppService.cs" />
+    <Compile Include="MultiTenancy\Dto\CreateTenantInput.cs" />
+    <Compile Include="MultiTenancy\Dto\TenantListDto.cs" />
+    <Compile Include="MultiTenancy\ITenantAppService.cs" />
+    <Compile Include="MultiTenancy\TenantAppService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ApplicationAppServiceBase.cs" />
+    <Compile Include="Authorization\End\Roles\Dto\UpdateRolePermissionsInput.cs" />
+    <Compile Include="Authorization\End\Roles\IRoleAppService.cs" />
+    <Compile Include="Authorization\End\Roles\RoleAppService.cs" />
+    <Compile Include="Sessions\Dto\CurrentLoginInformationsOutput.cs" />
+    <Compile Include="Sessions\Dto\TenantLoginInfoDto.cs" />
+    <Compile Include="Sessions\Dto\UserLoginInfoDto.cs" />
+    <Compile Include="Sessions\ISessionAppService.cs" />
+    <Compile Include="Sessions\SessionAppService.cs" />
+    <Compile Include="Authorization\End\Users\Dto\UserGetAllInput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\UpdateUserInput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\CreateUserInput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\ProhibitPermissionInput.cs" />
+    <Compile Include="Authorization\End\Users\Dto\UserListDto.cs" />
+    <Compile Include="Authorization\End\Users\IUserAppService.cs" />
+    <Compile Include="Authorization\End\Users\UserAppService.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\Dto\VirtualCardDto.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\Dto\VirtualCardForExportDto.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\Dto\VirtualCardForImportInput.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\Dto\VirtualCardGetAllInput.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\Dto\VirtualCardGroupGetAllInput.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\Dto\VirtualCardGroupOutput.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\Dto\VirtualCardImportInput.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\IVirtualCardAppService.cs" />
+    <Compile Include="VirtualProducts\VirtualCards\End\VirtualCardAppService.cs" />
+    <Compile Include="Wallets\Front\Dto\WalletInfoOutput.cs" />
+    <Compile Include="Wallets\Front\Dto\WalletRecordDto.cs" />
+    <Compile Include="Wallets\Front\Dto\WalletRecordGetAllInput.cs" />
+    <Compile Include="Wallets\End\Dto\WalletRecordDto.cs" />
+    <Compile Include="Wallets\End\Dto\WalletRecordGetAllInput.cs" />
+    <Compile Include="Wallets\Front\IWalletAppService.cs" />
+    <Compile Include="Wallets\End\IWalletRecordForEndAppService.cs" />
+    <Compile Include="Wallets\Front\IWalletRecordAppService.cs" />
+    <Compile Include="Wallets\Front\WalletAppService.cs" />
+    <Compile Include="Wallets\End\WalletRecordForEndAppService.cs" />
+    <Compile Include="Wallets\Front\WalletRecordAppService.cs" />
+    <Compile Include="Wechats\AutoReplys\Dto\AutoReplyArticleForCreateOrEditDto.cs" />
+    <Compile Include="Wechats\AutoReplys\Dto\AutoReplyDto.cs" />
+    <Compile Include="Wechats\AutoReplys\Dto\AutoReplyForCreateOrEditDto.cs" />
+    <Compile Include="Wechats\AutoReplys\Dto\AutoReplyForCreateOrEditInput.cs" />
+    <Compile Include="Wechats\AutoReplys\Dto\AutoReplyForCreateOrEditOutput.cs" />
+    <Compile Include="Wechats\AutoReplys\IAutoReplyAppService.cs" />
+    <Compile Include="Wechats\AutoReplys\AutoReplyAppService.cs" />
+    <Compile Include="Wechats\PublicWechats\Dto\GeneralSettingsEditDto.cs" />
+    <Compile Include="Wechats\PublicWechats\Dto\MenuCreateInput.cs" />
+    <Compile Include="Wechats\PublicWechats\Dto\PaySettingsEditDto.cs" />
+    <Compile Include="Wechats\PublicWechats\Dto\TemplateMessageEditDto.cs" />
+    <Compile Include="Wechats\PublicWechats\Dto\UploadMediaImageInput.cs" />
+    <Compile Include="Wechats\Shares\Dto\PreShareOutput.cs" />
+    <Compile Include="Wechats\PublicWechats\Dto\SettingsEditDto.cs" />
+    <Compile Include="Wechats\Shares\Dto\ShareDto.cs" />
+    <Compile Include="Wechats\Shares\Dto\ShareForCreateInput.cs" />
+    <Compile Include="Wechats\PublicWechats\IPublicWechatAppService.cs" />
+    <Compile Include="Wechats\PublicWechats\IPublicWechatSettingsAppService.cs" />
+    <Compile Include="Wechats\Shares\IShareAppService.cs" />
+    <Compile Include="Wechats\PublicWechats\PublicWechatAppService.cs" />
+    <Compile Include="Wechats\PublicWechats\PublicWechatSettingsAppService.cs" />
+    <Compile Include="Wechats\Shares\ShareAppService.cs" />
+    <Compile Include="Spread\Front\SpreadPosters\Dto\QrcodeDto.cs" />
+    <Compile Include="Wechats\WechatPays\WechatPayAppService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Core\Application.Core.csproj">
+      <Project>{5793dd7e-d5df-48d6-869d-66b88730bbfc}</Project>
+      <Name>Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.EntityFramework\Application.EntityFramework.csproj">
+      <Project>{68e0e6ef-0374-4830-9fba-f82ff653c6f7}</Project>
+      <Name>Application.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.AutoMapper\Infrastructure.AutoMapper.csproj">
+      <Project>{fce9d0af-f785-4b43-aa9c-4e277b1aab54}</Project>
+      <Name>Infrastructure.AutoMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.CommonFrame.EntityFramework\Infrastructure.CommonFrame.EntityFramework.csproj">
+      <Project>{b2ec31de-e492-4453-ae94-01cf85b3b6fe}</Project>
+      <Name>Infrastructure.CommonFrame.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.CommonFrame\Infrastructure.CommonFrame.csproj">
+      <Project>{d4362655-7c65-4bb5-993b-07664636c594}</Project>
+      <Name>Infrastructure.CommonFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Web.Common\Infrastructure.Web.Common.csproj">
+      <Project>{0d85d407-2891-4880-863f-6ad547826e76}</Project>
+      <Name>Infrastructure.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{1cf64352-c40d-4995-ba6e-7493f1d6a2d4}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{9d0fcbc0-7956-4ea5-b8bf-77f618cb2c2b}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Regions\Ends\" />
+    <Folder Include="ShopCarts\Admins\" />
+    <Folder Include="Shops\" />
+    <Folder Include="VirtualProducts\VirtualCards\Front\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

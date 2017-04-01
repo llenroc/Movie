@@ -1,0 +1,26 @@
+﻿<div ng-controller="app.mobile.wallet.index as vm">
+	<div class="data-preview">
+		<h3>@L("Balance")</h3>
+		<label class="main-data">{{vm.walletInfo.balance}}</label>
+		<a class="detail" href="@Url.Action("Index","WalletRecord")">@L("ViewWalletRecords")</a>
+	</div>
+	<div class="additional-data-block">
+		<ul class="additional-data-list">
+			<li>
+				<label class="title">@L("Withdrawed")</label>
+				<label class="value">{{vm.walletInfo.withdrawed}}</label>
+			</li>
+			<li>
+				<label class="title">@L("Withdrawing")</label>
+				<label class="value">{{vm.walletInfo.withdrawing}}</label>
+			</li>
+			<li>
+				<label class="title">@L("TotalIncome")</label>
+				<label class="value">{{vm.walletInfo.totalIncome}}</label>
+			</li>
+		</ul>
+	</div>
+    <div class="container">
+        <button class="button-text block primary" ng-disabled="vm.isWithdrawing" ng-class="{'button-loading':vm.isWithdrawing}" ng-if="vm.walletInfo.balance>0" ng-click="vm.withdraw()">@L("WithdrawAllBalance")</button>
+    </div>
+</div>

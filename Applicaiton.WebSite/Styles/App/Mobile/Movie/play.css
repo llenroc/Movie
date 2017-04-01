@@ -1,0 +1,10 @@
+﻿.movie-infos{
+    padding:1rem;
+}
+.movie-picture-list{
+    padding-left:0;
+    list-style:none;
+}
+.movie-picture-list img{
+    width:100%;
+}

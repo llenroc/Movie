@@ -1,0 +1,25 @@
+﻿.notice{
+
+}
+.notice.warning{
+    color: #4c4a42;
+    background-color: #fff9ea;
+    border-color: #dfd8c2;
+}
+.notice.error{
+    color: #fff;
+    background-color: #ff3a34;
+}
+.notice.static{
+
+}
+.notice .title{
+    font-weight:bold;
+}
+.notice .content{
+
+}
+.notice .action{
+    float: right;
+    margin-top:12px;
+}

@@ -1,0 +1,55 @@
+﻿@using Application.Movies.Dto
+@using Application.Movies
+@model MovieForUserDto
+<link href="~/Script/Libs/videojs/video-js.css" rel="stylesheet" type="text/css" />
+<script src="~/Script/Libs/videojs/video.js"></script>
+@Html.GetActionStyle()
+<input type="hidden" id="id" name="id" value="@Model.Id" />
+<div class="" ng-controller="app.mobile.movie.play as vm">
+	<div class="row">
+		<video class="video-js vjs-fluid" preload="none" controls ng-video movieid="vm.id" poster="@Model.Poster"></video>
+	</div>
+	<h4 class="text-center">@Model.Title</h4>
+	<div class="tab" data-ride="tab">
+		<ul class="tab-nav-list">
+			<li>
+				<a>Pictures</a>
+			</li>
+			<li class="actived">
+				<a>Detail</a>
+			</li>
+		</ul>
+		<div class="tab-box">
+			<div class="tab-page show">
+				<div class="movie-pictures">
+					<ul class="movie-picture-list">
+						@foreach (MoviePicture moviePicture in Model.Pictures)
+						{
+							<li>
+								<img src="@moviePicture.Path" />
+							</li>
+						}
+					</ul>
+				</div>
+			</div>
+			<div class="tab-page hide">
+				<div class="movie-infos">
+					<dl class="dl-horizontal">
+						<dt>movieCategory</dt>
+						<dd>@Model.MovieCategory.Title</dd>
+						<dt>description</dt>
+						<dd>@Model.Description</dd>
+						<dt>performer</dt>
+						<dd>@Model.Performer</dd>
+						<dt>director</dt>
+						<dd>@Model.Director</dd>
+						<dt>isCode</dt>
+						<dd></dd>
+						<dt>shouldBeMemberForPlay</dt>
+						<dd></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

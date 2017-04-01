@@ -1,0 +1,74 @@
+.notify-box{
+    position: fixed;
+    right: 0;
+    top:0;
+    width: 30%;
+    z-index: 10000;
+}
+.notify{
+    margin-bottom: 1px;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 1px 1px 3px #ddd;
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    background-color: #fff;
+}
+.notify .icon{
+    display: block;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ddd;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.4rem;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+.notify .icon.info{
+    border-color:#49afcd;
+    color:#49afcd;
+}
+.notify .icon.success{
+    border-color:#5bb75b;
+    color:#5bb75b;
+}
+.notify .icon.error{
+    border-color:#da4f49;
+    color:#da4f49;
+}
+.notify .icon:after{
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: top;
+}
+.notify .icon.info:after{
+    content: "\f129";
+}
+.notify .icon.success:after{
+    content: "\f00c";
+}
+.notify .icon.error:after{
+    content: "\f00d";
+}
+.notify .body{
+    -webkit-box-flex:1;
+}
+.notify .body .title{
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color:#333;
+}
+.notify .body .content{
+    color:#333;
+    font-size: 1.4rem;
+}
+.notify .body .content:last-child{
+    margin-bottom: 0;
+}

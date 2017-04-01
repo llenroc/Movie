@@ -1,0 +1,21 @@
+﻿<div class="" ng-controller="app.mobile.article.index as vm">
+	<div class="blank" ng-if="!vm.articles||!vm.articles.length">
+		@L("ThereIsNoItem")
+	</div>
+	<ul id="articleList" class="media-list article-list">
+		<li ng-repeat="article in vm.articles">
+			<a class="media-item" href="/Mobile/Article/Content?id={{article.id}}">
+				<div class="title-picture-box">
+					<img width="64" class="title-picture" ng-src="{{article.thumbnail}}">
+				</div>
+				<div class="body">
+					<h5 class="title">{{article.title}}</h5>
+					<p class="description">{{article.description}}</p>
+					<div class="footer clearfix">
+						<label class="datetime">{{article.creationTime| momentFormat:'YYYY-MM-DD HH:mm:ss'}}</label>
+					</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>

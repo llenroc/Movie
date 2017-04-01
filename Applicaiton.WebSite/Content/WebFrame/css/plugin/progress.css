@@ -1,0 +1,24 @@
+﻿.progress{
+    height:1.8rem;
+    position:relative;
+    background-color:#ccc;
+}
+.progress-hide{
+    -webkit-transform:rotateX(90deg);
+    -webkit-transition:0.3s;
+}
+.progress-hide.show{
+    -webkit-transform:rotateX(0deg);
+}
+.progress .indicator{
+    position:absolute;
+    left:0;
+    top:0;
+    width:0;
+    height:100%;
+    background:#4cff00;
+    color:#fff;
+    font-size:12px;
+    text-align:center;
+    line-height:1.8rem;
+}

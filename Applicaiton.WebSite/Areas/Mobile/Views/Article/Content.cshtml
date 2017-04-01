@@ -1,0 +1,23 @@
+﻿@model Infrastructure.Application.DTO.IdInput
+<div class="article-content-box container" ng-controller="app.mobile.article.content as vm">
+	<input type="hidden" id="id" value="@Model.Id" />
+	<article>
+		<header>
+			<h3>{{vm.article.title}}</h3>
+		</header>
+		<section class="post-info">
+			<div class="author-wrapper">
+				<label class="author">{{vm.article.author}}</label>
+			</div>
+			<label class="datetime">{{vm.article.creationTime| momentFormat:'YYYY-MM-DD HH:mm:ss'}}</label>
+		</section>
+		<div ng-bind-html="vm.article.content|toTrusted"></div>
+		<section class="article-info">
+			<label class="hint"><span>@L("Hint")</span><span>{{vm.article.hint}}</span></label>
+			<label class="like">
+				<button class="button-image like-button smaller" ng-disabled="vm.articleLike" ng-click="vm.addLike(1)"><img src="~/Content/WebFrame/image/Icon/like.png" /></button>
+				<span>{{vm.article.like}}</span>
+			</label>
+		</section>
+	</article>
+</div>

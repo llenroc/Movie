@@ -1,0 +1,37 @@
+﻿.tile-section{
+    padding:0 
+}
+.tile-block {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.tile-row {
+    display: table;
+    margin: 0 auto;
+    max-width: 1330px;
+}
+.tile-bordered:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
+}
+.tile{
+    display: table-cell;
+    border-left: 0;
+    padding:36px 24px;
+}
+.tile-row.spans-4 .tile{
+    width:25%;
+}
+.tile-image{
+    padding: 0 48px;
+    width:100%;
+}
+.tile-title{
+    margin-bottom: 0.25em;
+    color: #3c4146;
+}
+.tile-content{
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #767676;
+}

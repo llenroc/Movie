@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+
+    <script src="../../js/lib/jquery/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="../../css/global/common.css">
+    <link rel="stylesheet" href="../../css/global/font-awesome.css">
+
+    <link rel="stylesheet" href="../../css/base/common.css">
+    <link rel="stylesheet" href="../../css/base/button.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/base/code.css">
+    <link rel="stylesheet" href="../../css/base/form.css">
+    <link rel="stylesheet" href="../../css/base/grid.css">
+
+    <link rel="stylesheet" href="../../css/component/example.css">
+
+    <link rel="stylesheet" href="../../css/plugin/dialog.css">
+    <link rel="stylesheet" href="../../css/plugin/modalDialog.css">
+
+    <script src="../../js/lib/base.js"></script>
+    <script src="../../js/lib/string.js"></script>
+    <script src="../../js/lib/function.js"></script>
+    <script src="../../js/global/common.js"></script>
+    <script src="../../js/plugin/dialog.js"></script>
+    <script src="../../js/plugin/modalDialog.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="example">
+        <button class="button-text" id="button_create_promte">create a promte</button>
+        <button class="button-text" id="button_create_confirm">create a confirm</button>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#button_create_promte").click(function () {
+            $.promte("test", "default text");
+        })
+        $("#button_create_confirm").click(function () {
+            $.confirm("test");
+        });
+    })
+</script>
+</body>
+</html>

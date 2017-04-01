@@ -1,0 +1,15 @@
+﻿.block {
+    display: block !important; 
+}
+.inline-block {
+    display: inline-block !important; 
+}
+.inline {
+    display: inline !important; 
+}
+.table-cell{
+    display: table-cell !important;
+}
+.table{
+    display: table !important;
+}

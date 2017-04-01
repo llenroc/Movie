@@ -1,0 +1,29 @@
+﻿.module{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+}
+.module .module-header{
+    display:-webkit-box;
+    -webkit-box-align:center;
+    padding:1rem;
+}
+.module  .module-header .module-title{
+    margin:0;
+    -webkit-box-flex:1;
+}
+.module  .module-header button{
+    display:block;
+}
+.module  .module-header button+.module-title{
+    margin-left:1rem;
+}
+.module .module-body{
+    -webkit-box-flex:1;
+}
+.module.vertical-flex-module{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+}
+.module.vertical-flex-module .module-body{
+    -webkit-box-flex:1;
+}

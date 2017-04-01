@@ -1,0 +1,77 @@
+﻿.profileItem{
+    display:-webkit-box;
+    position:relative;
+}
+.profileItem .accessCount{
+	padding: 0 10px;
+	color:#fff;
+	font-size:12px;
+	background-color:#DD2727;
+	position: absolute;
+	top:0;
+	right:0;
+	line-height: 1;
+}
+.profileItem>.profileItemAvatarBox{
+    display:block;
+}
+.profileItem>.profileItemAvatarBox>.profileTtemAvatar{
+    
+}
+.profileItem>.profileItemBody{
+    -webkit-box-flex:1;
+    padding-left:1rem;
+}
+.profileItem>.profileItemBody>.profileItemName{
+    margin:0 0 1rem 0;
+    font-weight:bold;
+}
+.profileItem > .profileItemBody > .profileItemName.thin {
+	font-weight:normal;
+}
+.profileItem>.profileItemBody>.profileItemAdditionalProperty{
+    margin:0 0 1rem 0;
+    color:#999;
+    font-size: 12px;
+}
+.profileItem > .profileItemBody > .profileItemAdditionalProperty .key{
+	margin-right:3px;
+}
+.profileItem > .profileItemBody > .profileItemAdditionalProperty .value{
+
+}
+.profileItem > .profileItemBody > .profileItemAdditionalProperty .main-number{
+	background-color: #DD2727;
+    color: #fff;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.profileItem>.profileItemBody>.profileItemAdditionalProperty:last-child{
+    margin-bottom:0;
+}
+.profileItem .master-button{
+    position:absolute;
+    right:0.6rem;
+    top:50%;
+    margin-top:-1.6rem;
+}
+
+.profile-list{
+    list-style-type:none;
+    padding-left:0;
+}
+.profile-list li{
+    border-bottom:1px solid #eee;
+}
+.profile-list .profileItem{
+    background-color:#fff;
+}
+.profile-list .profileItem{
+    padding:1rem;
+}
+.profile-list .profileItem > .profileItemBody > .profileItemName {
+	color:#333;
+}

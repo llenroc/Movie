@@ -1,0 +1,13 @@
+﻿@model Application.WebSite.Areas.Mobile.Models.Layout.NavViewModel
+@using Application.MovieCategorys.Dto
+<link href="~/Styles/App/Mobile/layout/nav.css" rel="stylesheet" type="text/css" />
+<div class="category">
+	<ul class="category-list clearfix">
+		@foreach (MovieCategoryDto movieCategory in Model.MovieCategorys)
+		{
+			<li>
+				@Html.ActionLink(@movieCategory.Title, "Index", "MovieCategory", new { MovieCategoryId = movieCategory.Id }, new { })
+			</li>
+		}
+	</ul>
+</div> 

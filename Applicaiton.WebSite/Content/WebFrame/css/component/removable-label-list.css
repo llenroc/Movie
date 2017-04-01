@@ -1,0 +1,18 @@
+﻿ul.removable-label-list{
+    padding:0;
+    list-style-type:none;
+}
+ul.removable-label-list>li{
+    display:-webkit-inline-box;
+    -webkit-box-align:center;
+    background: #eee;
+    margin-right:3px;
+    padding: 0 10px;
+}
+ul.removable-label-list>li>label{
+    text-align: center;
+    display: block;
+}
+ul.removable-label-list>li>button{
+    display: block;
+}

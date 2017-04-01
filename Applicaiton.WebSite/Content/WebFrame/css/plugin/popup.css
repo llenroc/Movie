@@ -1,0 +1,5 @@
+﻿.popup{
+    position:absolute;
+    z-index:1000;
+    border: 0.2rem solid #333;
+}

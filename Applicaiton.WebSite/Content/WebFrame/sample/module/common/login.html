@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+
+    <link rel="stylesheet" href="../../../css/global/common.css">
+    <link rel="stylesheet" href="../../../css/global/font-awesome.css">
+
+    <link rel="stylesheet" href="../../../css/base/common.css">
+    <link rel="stylesheet" href="../../../css/base/button.css">
+    <link rel="stylesheet" href="../../../css/base/typography.css">
+    <link rel="stylesheet" href="../../../css/base/code.css">
+    <link rel="stylesheet" href="../../../css/base/form.css">
+    <link rel="stylesheet" href="../../../css/base/grid.css">
+
+    <link rel="stylesheet" href="../../../css/module/common/login.css">
+
+    <script src="../../../js/lib/jquery/jquery-2.1.1.js"></script>
+    <script src="../../../js/lib/base.js"></script>
+    <script src="../../../js/lib/string.js"></script>
+    <script src="../../../js/lib/function.js"></script>
+    <script src="../../../js/global/common.js"></script>
+    <script src="../../../js/plugin/validate.js"></script>
+
+    <script src="../../../js/page/login.js"></script>
+</head>
+<body>
+<div class="login height-full vertical-flex-box">
+    <div class="banner-box vertical-flex-inherit">
+        <img class="banner flex-adapter" src="../../image/1.jpg">
+        <img class="avatar" src="../../../image/avatar.png">
+    </div>
+    <h5 class="title">LOGIN</h5>
+    <div class="form">
+        <div class="row">
+            <div class="column-2"></div>
+            <div class="column-6">
+                <div class="input-wrapper" data-validate="true" data-validate-remote="/Account/CheckUsername" data-validate-minlength="6" data-validate-maxlength="12">
+                    <span class="form-group-block-icon button-icon left icon-cog"></span>
+                    <input type="text" placeholder="input">
+                </div>
+                <div class="input-wrapper" data-validate="true" data-validate-minlength="6">
+                    <span class="form-group-block-icon button-icon left icon-cog"></span>
+                    <input type="text" placeholder="input">
+                </div>
+                <button type="submit" class="button-text radius block button-submit">login</button>
+            </div>
+        </div>
+
+    </div>
+    <a class="button-text large block button-secondary">create a account</a>
+</div>
+</body>
+</html>

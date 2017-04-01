@@ -1,0 +1,108 @@
+.dropdown-wripper{
+    position: relative;
+}
+.dropdown-wripper .dropdown{
+    top:100%;
+    background: #fff;
+    z-index: 10000;
+}
+.dropdown{
+    position: absolute;
+}
+.dropdown-wripper .dropdown.left{
+    left:0;
+}
+.dropdown-wripper .dropdown.right{
+    right:0;
+}
+.dropdown-wripper>a>.dropdown-sign{
+    color: #ccc;
+    width: 2.4rem;
+    height: 2.4rem;
+    line-height: 2.2rem;
+    text-align: center;
+    display: block;
+    margin-left: 0.6rem;
+    border: 1px solid;
+    border-radius: 100%;
+}
+.dropdown-wripper>a.button-text>.dropdown-sign{
+    display: inline-block;
+    color:#999;
+    border-color:#999;
+}
+.dropdown.hide{
+    display: none;
+}
+
+.dropdown-menu{
+    margin:0;
+}
+.dropdown-menu.border{
+     border:1px solid #ddd;
+}
+.dropdown-menu>a{
+    font-size:1.2rem;
+    color:#333;
+}
+
+.dropdown-list,
+.dropdown-menu-list{
+    padding-left:0;
+    list-style-type:none;
+    margin:0;
+    min-width:16.9rem;
+    box-shadow: 0 3px 6px #eee;
+}
+.dropdown-list li,.dropdown-menu-list li{
+    font-size: 1.2rem;
+    -webkit-user-select:none;
+    cursor:pointer;
+    -webkit-user-select:none;
+}
+.dropdown-list li:hover,.dropdown-menu-list li:hover{
+    background:#eee;
+}
+.dropdown-list li:not(:last-child),.dropdown-menu-list li:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+.dropdown-list li a,.dropdown-menu-list li a{
+    padding:1rem 1.2rem;
+    display:block;
+    cursor:pointer;
+    -webkit-user-select:none;
+    color: #333;
+}
+.dropdown-list li a>span,.dropdown-list li a>i,.dropdown-menu-list li a>span,.dropdown-menu-list li a>i{
+    vertical-align:middle;
+}
+
+.dropdown-list .header,.dropdown-menu-list .header{
+    padding: 1rem;
+    background-color: #eee;
+    margin: 0px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.notify-dropdown-list li a{
+    display:-webkit-box;
+    -webkit-box-align:center;
+}
+.notify-dropdown-list li a .label{
+    margin-right:1rem;
+}
+.notify-dropdown-list li a .notify-title{
+    display:block;
+    -webkit-box-flex:1;
+    font-weight: 600;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notify-dropdown-list li .time{
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: right;
+    color:#999;
+}

@@ -1,0 +1,57 @@
+.login .banner-box{
+    position: relative;
+}
+@keyframes banner-load{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.login .banner{
+    width: 100%;
+    display: block;
+    animation:banner-load 1s;
+}
+@keyframes avatar-load{
+    0%{
+        transform:translateY(-100%)
+    }
+    100% {
+        transform:translateX(0%)
+    }
+}
+.login .avatar{
+    position: absolute;
+    width: 96px;
+    border-radius: 100%;
+    left: 50%;
+    margin-left: -4.8rem;
+    top: 50%;
+    margin-top: -3.2rem;
+    animation:avatar-load 1s;
+    -webkit-transition:0.3s;
+}
+
+.login .title{
+    text-align: center;
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #E38664;
+    color:#fff;
+    -webkit-user-select: none;
+}
+
+.login .form{
+    padding: 5rem 1rem 3rem 1rem;
+}
+.login .input-wrapper{
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.login .input-wrapper .form-group-block-icon{
+}
+.login .input-wrapper input{
+
+}

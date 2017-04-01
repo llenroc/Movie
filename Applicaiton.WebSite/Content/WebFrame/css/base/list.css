@@ -1,0 +1,90 @@
+.list-inline, 
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+ul.unstyled, ol.unstyled, .unstyled {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+.numeric-list {
+    list-style: none;
+    counter-reset: li;
+    padding-left: 0;
+    margin-left: 0px;
+    color: #333;
+}
+.numeric-list > li {
+    padding:0.6rem 1.2rem;
+}
+.numeric-list > li:before {
+    content: counter(li);
+    counter-increment: li;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #59cde2;
+    border-radius: 50%;
+    text-align: center;
+    width: 1.6rem;
+    display: inline-block;
+    line-height: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.6rem;
+    display: inline-block;
+    font-style: italic;
+}
+
+.counter-list,.counter-list ul,.counter-list ol{
+    counter-reset: item;
+    list-style:none;
+}
+.counter-list li {
+    display: block;
+}
+.counter-list li:before{
+    counter-increment: item;
+    content: counters(item, ".") " ";
+}
+
+dl.info-list{
+
+}
+dl.info-list dt{
+    font-size:1.6rem;
+    margin-bottom:1rem;
+}
+dl.info-list dd{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.well-info-list {
+	list-style-type:none;
+	padding-left:0;
+	background-color:#fff;
+}
+.well-info-list li {
+	display:-webkit-box;
+	-webkit-box-align:center;
+	height:32px;
+	line-height:32px;
+	font-size:12px;
+	padding:0 1rem;
+}
+.well-info-list li .key {
+	display:block;
+	text-align:left;
+	color:#999;
+}
+.well-info-list li .value {
+	-webkit-box-flex:1;
+	display:block;
+	text-align:right;
+	color:#333;
+}

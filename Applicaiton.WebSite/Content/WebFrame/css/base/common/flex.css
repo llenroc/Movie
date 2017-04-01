@@ -1,0 +1,35 @@
+﻿/*Alignment for every item*/
+.flex-items-top{ 
+    align-items: flex-start;
+}
+.flex-items-middle { 
+    align-items: center;
+}
+.flex-items-bottom { 
+    align-items: flex-end;
+}
+
+/*Alignment per item*/
+.flex-top{
+    align-self: flex-start; 
+}
+.flex-middle {
+    align-self: center; 
+}
+.flex-bottom {
+    align-self: flex-end; 
+}
+
+/*Horizontal alignment of item*/
+.flex-justify-center{
+    justify-content: center;
+}
+.flex-justify-end {
+    justify-content: flex-end;
+}
+.flex-justify-space-around {
+    justify-content: space-around;
+}
+.flex-justify-space-between {
+    justify-content: space-between;
+}

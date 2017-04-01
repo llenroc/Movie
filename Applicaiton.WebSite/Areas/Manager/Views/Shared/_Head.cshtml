@@ -1,0 +1,28 @@
+﻿@using Infrastructure.Timing
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>@ViewBag.PageTitle</title>
+    <link rel="shortcut icon" href="~/favicon.ico">
+	
+	@Styles.Render("~/Bundles/WebFrame.css")
+	@Html.GetAreaStyles()
+	
+	@Scripts.Render("~/Bundles/WebFrame.js")
+    <script src="~/signalr/hubs"></script>
+    @Scripts.Render("~/Bundles/Infrastructure.js")
+
+    <!-- Dynamic scripts of Infrastructure system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/ServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/api/ServiceProxies/GetAll?type=angular&v=@(Clock.Now.Ticks)"></script>
+    <script src="~/Scripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+
+    @Scripts.Render("~/Bundles/Common.js")
+    @Scripts.Render("~/Bundles/App/Common.js")
+	@Scripts.Render("~/Bundles/WebFrame/angular.js")
+    @Scripts.Render("~/Bundles/App/Manager.js")
+</head>

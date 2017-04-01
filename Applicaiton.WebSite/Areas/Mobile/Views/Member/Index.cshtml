@@ -1,0 +1,24 @@
+﻿<div class="" ng-controller="app.mobile.memberCard.index as vm">
+    <div class="profileItem">
+        <div class="profileItemAvatarBox">
+            <img width="64" height="64" class="profileTtemAvatar imageCircle" ng-src="{{vm.user.avatar}}">
+        </div>
+        <div class="profileItemBody">
+            <h5 class="profileItemName">{{vm.user.nickName}}</h5>
+            <p class="profile-info-item" ng-if="vm.memberCard">
+                {{vm.memberCard.level.name}}
+            </p>
+        </div>
+		<a ng-if="!vm.memberCard" class="button-text radius button-buy-member-card" href="/Mobile/MemberCardPackage/Index">Buy MemberCard</a>
+    </div>
+	<div class="container" ng-if="vm.memberCard">
+		<div class="member-card">
+			<h3 class="name">{{vm.memberCard.level.name}}</h3>
+			<h5 class="no">{{vm.memberCard.no}}</h5>
+			<label class="limit-time">{{vm.memberCard.limitTime}}</label>
+		</div>
+	</div>
+	@Html.Partial("UserCenterNav")
+</div>
+@Html.GetActionStyle()
+@Html.GetActionScript()

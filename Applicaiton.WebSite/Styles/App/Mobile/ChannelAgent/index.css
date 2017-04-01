@@ -1,0 +1,127 @@
+﻿.channel-agent-list{
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 20px;
+}
+.channel-agent-list>li{
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom:1px solid #eee;
+    background: url(/Content/Images/channel-agent-item-bg.png);
+    background-size: 100% 100%;
+    box-shadow: 1px 1px 3px #ddd;
+}
+.channel-agent-header{
+    display:-webkit-box;
+    -webkit-box-align:center;
+    background: url(/Content/Images/channel-agent-item-ribbon.png);
+    background-size: 100% 100%;
+    position: relative;
+    top:-20px;
+}
+.channel-agent-header .channel-agent-name{
+    -webkit-box-flex: 1;
+    height: 48px;
+    line-height: 48px;
+    display: block;
+    margin: 0;
+    text-align: center;
+    color:#fff;
+}
+.channel-agent-header .channel-agent-name label{
+    color: #fff;
+    font-size: 12px;
+    padding: 0;
+    height:48px;
+    line-height: 64px;
+    text-align: center;
+}
+.channel-agent-header .channel-agent-name small{
+    color:#fff;
+}
+.channel-agent-wrapper{
+    display: -webkit-box;
+    -webkit-box-align: center;
+    margin-top: -5px;
+}
+.channel-agent-box{
+    position: relative;
+}
+.channel-agent-box .product{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 10px;
+    color:#333;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+.channel-agent-box .product .line{
+    margin:0 6px;
+    display: block;
+    -webkit-box-flex: 1;
+    height: 1px;
+    background-color: rgba(206, 202, 202, 0.55);
+}
+.channel-agent-info{
+    display: -webkit-box;
+}
+.channel-agent-info .info-item{
+    -webkit-box-flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+.channel-agent-info .info-item .info-key{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.channel-agent-info .info-item .info-body{
+
+}
+.channel-agent-info .info-item .info-body .price{
+    font-size:12px;
+}
+.channel-agent-info .info-item .info-body .rebate-ratio{
+    font-size: 18px;
+    color: #333;
+    padding: 0 3px;
+    border-radius: 4px;
+}
+.channel-agent-info .info-icon{
+    color: #333;
+    display: inline-block;
+    text-align: center;
+}
+
+.channel-agent-footer{
+    padding:6px;
+    text-align: right;
+}
+.btn-right-block{
+    display: block;
+}
+.apply-price{
+    font-size: 16px;
+    font-weight: bold;
+    color: #e4393c;
+}
+.channel-agent-box{
+    position: relative;
+    -webkit-box-flex: 1;
+}
+.channel-agent-distribution-list{
+    list-style-type: none;
+    padding-left: 0;
+}
+.channel-agent-distribution-list>li .level{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    line-height: 16px;
+    color: #333;
+    text-align: center;
+    font-style: italic;
+}

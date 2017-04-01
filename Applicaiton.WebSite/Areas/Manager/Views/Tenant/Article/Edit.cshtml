@@ -1,0 +1,92 @@
+﻿<div ng-controller="app.manager.article.edit as vm">
+	<form name="articleEditForm" novalidate>
+		<div class="tab" data-ride="tab">
+			<ul class="tab-nav-list">
+				<li class="actived">
+					<a>@L("BaseInfo")</a>
+				</li>
+				<li>
+					<a>@L("Content")</a>
+				</li>
+			</ul>
+			<div class="tab-box">
+				<div class="tab-page show">
+					<div class="form-group">
+						<label class="form-group-key">@L("Title")</label>
+						<div class="form-group-block">
+							<div class="input-wrapper">
+								<input type="text" name="title" ng-model="vm.article.title" required>
+							</div>
+							<p class="validate-message error" ng-show="articleEditForm.title.$error.required">@L("TitleIsRequired")</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-group-key">@L("SubTitle")</label>
+						<div class="form-group-block">
+							<div class="input-wrapper">
+								<input type="text" name="subTitle" ng-model="vm.article.subTitle">
+							</div>
+							<p class="validate-message error" ng-show="articleEditForm.subTitle.$error.required">@L("SubTitleIsRequired")</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-group-key">@L("Description")</label>
+						<div class="form-group-block">
+							<div class="input-wrapper">
+								<textarea name="description" ng-model="vm.article.description"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-group-key">@L("Author")</label>
+						<div class="form-group-block">
+							<div class="input-wrapper">
+								<input type="text" name="author" required ng-model="vm.article.author">
+							</div>
+							<p class="validate-message error" ng-show="articleEditForm.author.$error.required">@L("AuthorIsRequired")</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-group-key">@L("Thumbnail")</label>
+						<div class="form-group-block">
+							<div class="picture-uploader"
+								 picture-uploader
+								 path="vm.article.thumbnail"
+								 data-option-url="/Manager/Home/Upload"
+								 data-option-default-image="/Content/WebFrame/image/upload-picture.png">
+								<img height="128" ng-src="{{vm.article.thumbnail}}" />
+								<input type="file" />
+								<input type="hidden" name="thumbnail" required ng-model="vm.article.thumbnail" />
+							</div>
+							<p class="validate-message error" ng-show="articleCreateForm.thumbnail.$error.required">@L("ThumbnailIsRequired")</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-group-key">@L("IsRedirectExternal")</label>
+						<div class="form-group-block">
+							<div class="switcher">
+								<label><input type="radio" name="isRedirectExternal" ng-value="true" ng-model="vm.article.isRedirectExternal" required /><span>@L("Yes")</span></label>
+								<label><input type="radio" name="isRedirectExternal" ng-value="false" ng-model="vm.article.isRedirectExternal" required /><span>@L("No")</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group" ng-if="vm.article.isRedirectExternal">
+						<div class="form-group">
+							<label class="form-group-key">@L("ExternalLink")</label>
+							<div class="form-group-block">
+								<div class="input-wrapper">
+									<input type="url" ng-model="vm.article.externalLink">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-page hide">
+					<div class="content-editor" id="content">
+					</div>
+				</div>
+				<button type="submit" class="button-text block primary" ng-click="vm.save()" ng-disabled="articleEditForm.$invalid">@L("Save")</button>
+			</div>
+		</div>
+	</form>
+</div>

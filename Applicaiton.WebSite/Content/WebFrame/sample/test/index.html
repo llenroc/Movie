@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Module Example</title>
+    <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.20/angular.js" data-semver="1.2.20"></script>
+    <script>
+        (function() {
+ 
+            var app = angular.module("mainApp", []);
+ 
+            app.controller("MainCtrl", function() {
+                console.log("in MainCtrl...");
+                // vt = virtual this - just shorthand
+                vt = this;
+                vt.name = "MainCtrl";
+                vt.allThings = ["first", "second", "third"];
+ 
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <div ng-controller="MainCtrl as mc">
+        <p>
+            mc refers to MainCtrl which has
+            been added to the angular app module
+        </p>
+        <p>Hello {{mc.name}}!</p>
+        <ol><li ng-repeat="a in mc.allThings">{{a}}</li></ol>
+    </div>
+</body>
+
+</html>

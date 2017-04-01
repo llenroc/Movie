@@ -1,0 +1,28 @@
+﻿<script src="~/Script/Libs/highchart/highcharts.js"></script>
+<script src="~/Script/Libs/highchart/highcharts-more.js"></script>
+<script src="~/Script/Libs/highchart/solid-gauge.js"></script>
+<div ng-controller="app.manager.tenant.dashboard.index as vm">
+	<div class="row">
+		<div class="column-2-5">
+			<div id="cpuMonitor" class="height-em20"></div>
+		</div>
+		<div class="column-2-5">
+			<div id="memMonitor" class="height-em20"></div>
+		</div>
+		<div class="column-2-5">
+			<div id="tcpMonitor" class="height-em20"></div>
+		</div>
+		<div class="column-2-5">
+			<div id="onlineMonitor" class="height-em20"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column-5">
+			<div id="usersChart"></div>
+		</div>
+		<div class="column-5">
+			<div id="orderChart"></div>
+		</div>
+	</div>
+	<div id="sales_statistics" class="portlet-body-morris-fit morris-chart" style="height: 260px"></div>
+</div>

@@ -1,0 +1,14 @@
+﻿<br />
+<br />
+<br />
+<br />
+<div class="footer-nav">
+    <ul class="nav-list">
+        <li ng-repeat="menuItem in vm.footerMenu.items">
+            <a href="{{menuItem.url}}">
+                <img class="nav-icon" ng-src="{{menuItem.icon}}">
+                <label class="title">{{menuItem.displayName}}</label>
+            </a>
+        </li>
+    </ul>
+</div>

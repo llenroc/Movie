@@ -1,0 +1,107 @@
+﻿<div ng-controller="app.manager.movie.create as vm">
+	<form name="movieCreateForm" novalidate>
+		<div class="form-group">
+			<label class="form-group-key">@L("Title")</label>
+			<div class="form-group-block">
+				<div class="input-wrapper">
+					<input type="text" name="title" ng-model="vm.movie.title" required ng-minlength="5">
+				</div>
+				<p class="validate-message error" ng-show="movieCreateForm.title.$error.required">@L("TitleIsRequired")</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("MovieCategory")</label>
+			<div class="form-group-block">
+				<select required name="movieCategoryId" ng-model="vm.movie.movieCategoryId" ng-options="movieCategory.id as movieCategory.title for movieCategory in vm.movieCategorys">
+					<option value="">-- please select --</option>
+				</select>
+				<p class="validate-message error" ng-show="movieCreateForm.movieCategoryId.$error.required">@L("MovieCategoryIsRequired")</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("Director")</label>
+			<div class="form-group-block">
+				<div class="input-wrapper">
+					<input type="text" name="director" ng-model="vm.movie.director">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("Performer")</label>
+			<div class="form-group-block">
+				<div class="input-wrapper">
+					<input type="text" name="performer" ng-model="vm.movie.performer">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("Path")</label>
+			<div class="form-group-block">
+				<div class="input-wrapper">
+					<input type="text" name="path" ng-model="vm.movie.path" required>
+				</div>
+				<p class="validate-message error" ng-show="movieCreateForm.path.$error.required">@L("PathIsRequired")</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("Description")</label>
+			<div class="form-group-block">
+				<textarea name="description" ng-model="vm.movie.description"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("IsCode")</label>
+			<div class="form-group-block">
+				<div class="switcher">
+					<label><input type="radio" name="isCode" ng-value="true" ng-model="vm.movie.isCode" /><span>@L("Yes")</span></label>
+					<label><input type="radio" name="isCode" ng-value="false" ng-model="vm.movie.isCode" /><span>@L("No")</span></label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("Cover")</label>
+			<div class="form-group-block">
+				<div class="picture-uploader" picture-uploader path="vm.movie.coverPath" data-option-url="/Manager/Home/Upload" data-option-default-image="/Content/WebFrame/image/upload-picture.png">
+					<img height="96" ng-src="{{vm.movie.coverPath}}" />
+					<input type="file" />
+					<input type="hidden" name="coverPath" required ng-model="vm.movie.coverPath" />
+				</div>
+				<p class="validate-message error" ng-show="movieCreateForm.coverPath.$error.required">@L("CoverIsRequired")</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("Poster")</label>
+			<div class="form-group-block">
+				<div class="picture-uploader" picture-uploader path="vm.movie.poster" data-option-url="/Manager/Home/Upload" data-option-default-image="/Content/WebFrame/image/upload-picture.png">
+					<img height="96" ng-src="{{vm.movie.poster}}" />
+					<input type="file" />
+					<input type="hidden" name="poster" required ng-model="vm.movie.poster" />
+				</div>
+				<p class="validate-message error" ng-show="movieCreateForm.poster.$error.required">@L("PosterIsRequired")</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("Pictures")</label>
+			<div class="form-group-block">
+				<div class="picture-uploader-group">
+					<div class="picture-uploader" ng-repeat="moviePicture in vm.movie.pictures" picture-uploader path="moviePicture.path" data-option-url="/Manager/Home/Upload" data-option-default-image="/Content/WebFrame/image/upload-picture.png">
+						<img height="96" ng-src="{{moviePicture.path}}" />
+						<input type="file" />
+						<input type="hidden" required ng-model="moviePicture.path" />
+					</div>
+				</div>
+			</div>
+			<button class="button-text info block" ng-click="vm.addPicture()">@L("AddPicture")</button>
+		</div>
+		<div class="form-group">
+			<label class="form-group-key">@L("ShouldBeMemberForPlay")</label>
+			<div class="form-group-block">
+				<div class="switcher">
+					<label><input type="radio" name="shouldBeMemberForPlay" ng-value="true" ng-model="vm.movie.shouldBeMemberForPlay" required /><span>@L("On")</span></label>
+					<label><input type="radio" name="shouldBeMemberForPlay" ng-value="false" ng-model="vm.movie.shouldBeMemberForPlay" required /><span>@L("Off")</span></label>
+				</div>
+			</div>
+		</div>
+		<button type="submit" ng-disabled="movieCreateForm.$invalid" class="button-text primary block" ng-click="vm.create()">@L("Save")</button>
+	</form>
+</div>

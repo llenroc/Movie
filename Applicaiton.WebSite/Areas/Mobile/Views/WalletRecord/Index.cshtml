@@ -1,0 +1,17 @@
+﻿<div ng-controller="app.mobile.walletRecord.index as vm">
+	<ul class="wallet-record-list" id="walletRecordList">
+		<li ng-repeat="walletRecord in vm.walletRecords">
+			<div class="main-info">
+				<label class="remark">{{walletRecord.remark}}</label>
+				<label class="money" ng-class="{'in':walletRecord.money>0,'out':walletRecord.money<0}">
+					<span ng-if="walletRecord.money>0">+</span>
+					{{walletRecord.money}}
+				</label>
+			</div>
+			<div class="minor-info">
+				<label class="datetime">{{walletRecord.creationTime| momentFormat:'YYYY-MM-DD HH:mm:ss'}}</label>
+				<label class="type">{{walletRecord.typeText}}</label>
+			</div>
+		</li>
+	</ul>
+</div>

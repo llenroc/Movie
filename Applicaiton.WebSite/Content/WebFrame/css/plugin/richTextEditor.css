@@ -1,0 +1,179 @@
+﻿.rich-text-editor{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+	border: 2px solid #eee;
+}
+.rich-text-editor .toolbar{
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: -webkit-box;
+	overflow-x:auto;
+}
+/* Let's get this party started */
+.rich-text-editor .toolbar::-webkit-scrollbar {
+    width:0.5rem;
+}
+            
+/* Track */
+.rich-text-editor .toolbar::-webkit-scrollbar-track {
+    background-color:transparent;
+}      
+/* Handle */
+.rich-text-editor .toolbar::-webkit-scrollbar-thumb {
+    background:#eee;
+	height:3px;        
+}
+.rich-text-editor .toolbar .toolbar-item{
+    margin-right:3px;
+}
+.rich-text-editor .toolbar .button-icon{
+    text-align: center;
+    background-image: url(/Content/WebFrame/image/edit.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+}
+.rich-text-editor .dropdown-wripper .button-text{
+    background:transparent;
+}
+.edit-icon-fontname {
+    background-position: 0 33.33333333%;
+}
+.edit-icon-undo {
+    background-position:43.58974359% 33.33333333%;
+}
+.edit-icon-redo {
+    background-position:71.79487179% 33.33333333%;
+}
+.edit-icon-fontsize {
+    background-position: 0 33.33333333%;
+}
+.edit-icon-removeformat {
+    background-position: 43.58974359% 0;
+}
+.edit-icon-bold {
+    background-position: 0 33.33333333%;
+}
+.edit-icon-italic {
+    background-position: 57.69230769% 50%;
+}
+.edit-icon-underline {
+    background-position: 100% 0;
+}
+.edit-icon-strikethrough {
+    background-position:0 66.66666667%;
+}
+.edit-icon-justifyleft {
+    background-position: 0 16.66666667%;
+}
+.edit-icon-justifycenter {
+    background-position: 28.20512821% 100%;
+}
+.edit-icon-justifyright {
+    background-position: 14.1025641% 16.66666667%;
+}
+.edit-icon-justifyfull {
+    background-position: 71.79487179% 16.66666667%;
+}
+.edit-icon-indent {
+    background-position:57.69230769% 16.66666667%;
+}
+.edit-icon-outdent {
+    background-position: 71.79487179% 0;
+}
+.edit-icon-forecolor {
+    background-position: 0 33.33333333%;
+}
+.edit-icon-backcolor {
+    background-position: 0 33.33333333%;
+}
+.edit-icon-link {
+    background-position: 14.1025641% 66.66666667%;
+}
+.edit-icon-insertimage {
+    background-position: 57.69230769% 0;
+}
+.edit-icon-insertorderedlist {
+    background-position: 28.20512821% 66.66666667%;
+}
+.edit-icon-insertunorderedlist {
+    background-position: 42.30769231% 66.66666667%;
+}
+.edit-icon-save {
+    background-position: 0 33.33333333%;
+}
+.rich-text-editor .content{
+    display:block;
+    -webkit-box-flex:1;
+    background: #fff;
+    outline: none;
+    padding:10px;
+    overflow-y:scroll;
+	min-height: 300px;
+}
+.rich-text-editor .previewer{
+    display:block;
+    -webkit-box-flex:1;
+    background: #fff;
+    outline: none;
+    padding:10px;
+    overflow-y:scroll;
+}
+.rich-text-editor textarea.code{
+    display:block;
+    -webkit-box-flex:1;
+    background: #fff;
+    outline: none;
+    padding:10px;
+    overflow-y:scroll;
+}
+
+.rich-text-editor .image-container{
+    overflow:hidden;
+    display: inline-block;
+    position:relative;
+}
+.rich-text-editor .image-container.setting{
+    border: 2px solid #333;
+}
+.rich-text-editor .image-container img{
+    width:100%;
+}
+.rich-text-editor .image-container .image-setting-bar{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    background:rgba(255, 255, 255, 0.7);
+    padding: 3px;
+}
+.rich-text-editor .image-container .image-setting-bar>*{
+    margin-right:1px;
+    margin-bottom:1px;
+    -webkit-user-select:none;
+}
+
+.color-picker{
+    width:256px;
+}
+.color-picker .color-picker-martix{
+
+}
+.color-picker .color-picker-martix .color-cell{
+    float: left;
+    width:32px;
+    height:32px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+.color-picker .color-picker-martix .color-cell:hover{
+
+}
+
+.rich-text-editor .content pre{
+    background:#eee;
+    padding:10px;
+}

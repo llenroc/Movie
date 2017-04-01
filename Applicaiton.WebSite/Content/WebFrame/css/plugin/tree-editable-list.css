@@ -1,0 +1,34 @@
+﻿.tree-editable-list{
+    list-style-type:none;
+    padding-left:0;
+}
+.tree-editable-list ul{
+    list-style-type:none;
+}
+.tree-editable-list li{
+
+}
+.tree-editable-list li.selected>.item-info{
+    background-color:#169ef4;
+}
+.tree-editable-list li.selected>.item-info .name{
+    color:#fff;
+}
+.tree-editable-list li.selected > .item-info .button-icon{
+	border-color: #fff;
+    color: #fff;
+}
+.tree-editable-list li .item-info{
+    display:-webkit-box;
+    -webkit-box-align:center;
+    background-color:#eee;
+}
+.tree-editable-list li .item-info{
+    padding: 3px 10px;
+    margin-bottom: 1px;
+}
+.tree-editable-list li .item-info .name{
+    display:block;
+    font-size:12px;
+    -webkit-box-flex:1;
+}

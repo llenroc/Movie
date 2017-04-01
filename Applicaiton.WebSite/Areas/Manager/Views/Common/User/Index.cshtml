@@ -1,0 +1,62 @@
+﻿<div ng-controller="app.manager.user.index as vm">
+    <div class="view-page-head">
+        <h1 class="view-page-title">
+            <span>@L("Users")</span> <small>@L("UsersHeaderInfo")</small>
+        </h1>
+        <a class="button-text primary" ui-sref="user.createOrEdit"><i class="icon-plus"></i>@L("CreateNewUser")</a>
+    </div>
+    <div class="row">
+        <div class="column-10">
+            <div class="responsive-table-container">
+                <table class="table table-bordered table-striped table-hover" id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>@L("Avatar")</th>
+                            <th>@L("UserName")</th>
+                            <th>@L("NickName")</th>
+                            <th>@L("EmailAddress")</th>
+                            <th>@L("Role")</th>
+                            <th>@L("CreationTime")</th>
+                            <th>@L("IsEmailConfirmed")</th>
+                            <th>@L("IsSpreader")</th>
+							<th>@L("Source")</th>
+                            <th>@L("Actions")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="user in vm.users">
+                            <td><img width="32" class="circle" ng-src="{{user.avatar}}" /></td>
+                            <td>{{user.userName}}</td>
+                            <td>{{user.nickName}}</td>
+                            <td>{{user.emailAddress}}</td>
+                            <td>
+                                <span ng-repeat="role in user.roles">
+                                    {{role.roleName}}
+                                </span>
+                            </td>
+                            <td>{{user.creationTime|momentFormat: 'YYYY-MM-DD HH:mm:ss'}}</td>
+                            <td>
+                                <span class="label success" ng-if="user.isEmailConfirmed">@L("Yes")</span>
+                                <span class="label error" ng-if="!user.isEmailConfirmed">@L("No")</span>
+                            </td>
+                            <td>
+                                <span class="label success" ng-if="user.isSpreader">@L("Yes")</span>
+                                <span class="label error" ng-if="!user.isSpreader">@L("No")</span>
+                            </td>
+							<td>{{user.source}}</td>
+                            <td>
+                                <div class="dropdown-wripper dropdown-menu">
+                                    <a data-toggle="dropdown" class="button-text">@L("Actions")<i class="icon icon-angle-down dropdown-sign"></i></a>
+                                    <ul class="dropdown dropdown-menu-list left hide" data-ride="dropdown">
+                                        <li><a ui-sref="user.createOrEdit({id:user.id})">@L("Edit")</a></li>
+										<li><a ng-click="vm.deleteUser(user)">@L("Delete")</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

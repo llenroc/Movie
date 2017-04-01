@@ -1,0 +1,63 @@
+.page .breadcrumb {
+  position: relative;
+  height: 3.4rem;
+  display: block;
+  padding: 0;
+}
+.page .breadcrumb .list {
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #333;
+  border-radius: 0;
+  padding: 0;
+  margin:0;
+}
+.page .breadcrumb .list > li {
+  display: inline-block;
+}
+.page .breadcrumb .list > li:not(:first-child){
+  margin-left:-0.3rem;
+}
+.page .breadcrumb .list > li > a {
+  display: block;
+  color: #333;
+  height: 3.4rem;
+  line-height: 3.2rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  background-color: #fff;
+  font-style: italic;
+  font-weight:bold;
+  text-decoration: none;
+  padding: 0 1.2rem 0 2.4rem;
+}
+.page .breadcrumb .list > li > a:before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1.7rem solid transparent;
+  border-bottom: 1.7rem solid transparent;
+  border-left: 1rem solid #000;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.7rem;
+  margin-left: 0;
+  left: 100%;
+  z-index: 3;
+}
+.page .breadcrumb .list > li > a:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1.7rem solid transparent;
+  border-bottom: 1.7rem solid transparent;
+  border-left: 1rem solid #FFF;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.7rem;
+  left: 100%;
+  z-index: 3;
+}

@@ -1,0 +1,32 @@
+.com { color: #93a1a1 !important; }
+.lit { color: #195f91 !important; }
+.pun, .opn, .clo { color: #93a1a1 !important; }
+.fun { color: #dc322f !important; }
+.str, .atv { color: #dc322f !important; }
+.kwd, .tag { color: #1e347b !important;}
+.typ, .atn, .dec, .var { color: #195f91 !important; }
+.pln { color: #48484c !important; }
+
+.prettyprint {
+    padding: 8px;
+    background-color: #eee;
+    margin: 0;
+    margin-bottom: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+.prettyprint.linenums {
+    /*box-shadow: inset 40px 0 0 #eeeeee, inset 41px 0 0 #ececf0;*/
+}
+
+.prettyprint ol.linenums {
+    margin: 0;
+}
+.prettyprint ol.linenums li {
+    padding-left: 12px;
+    color: #999999;
+    line-height: 1.5em;
+}
+.prettyprint ol.linenums li:hover{
+    background-color:#eee;
+}

@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "../Shared/_WithCategoryLayout.cshtml";
+}
+@using Infrastructure.Application.DTO
+@using Application.Movies.Dto
+@model PagedResultDto<MovieDto>
+<div class="padding-base">
+    <ul class="thumbnails-list span-2">
+        @foreach (MovieDto movie in Model.Items)
+        {
+            <li>
+                <a class="thumbnail" href="/Mobile/Movie/Play?Id=@movie.Id">
+                    <img class="thumbnail-picture" src="@movie.CoverPath" />
+                    <div class="thumbnail-block">
+                        <h6 class="thumbnail-title">@movie.Title</h6>
+                    </div>
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+@Html.Pagination(Model)

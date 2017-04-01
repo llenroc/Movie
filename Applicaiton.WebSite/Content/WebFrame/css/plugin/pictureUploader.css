@@ -1,0 +1,33 @@
+﻿.picture-uploader{
+    position:relative;
+}
+.picture-uploader-group>.picture-uploader{
+    display:inline-block;
+    width:calc(25% - 1rem);
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+}
+.picture-uploader-group>.picture-uploader:first-child{
+    width:calc(25% - 0.5rem);
+    margin-right:0.5rem;
+}
+.picture-uploader-group>.picture-uploader:last-child{
+    width:calc(25% - 0.5rem);
+    margin-left:0.5rem;
+}
+.picture-uploader img {
+    display:block;
+}
+.picture-uploader input[type=file]{
+    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor:pointer;
+}
+.picture-uploader .progress{
+    margin-top:1rem;
+}

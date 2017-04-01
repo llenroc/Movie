@@ -1,0 +1,14 @@
+﻿<div ng-controller="app.manager.movieCategory.create as vm">
+    <form class="form-vertical" name="movieCategoryCreateForm" novalidate>
+        <div class="form-group">
+            <label class="form-group-key">@L("Title")</label>
+            <div class="form-group-block">
+                <div class="input-wrapper">
+                    <input type="text" name="title" ng-model="vm.movieCategory.title" required>
+                </div>
+				<p class="validate-message error" ng-show="movieCategoryCreateForm.title.$error.required">@L("TitleIsRequired")</p>
+            </div>
+        </div>
+        <button type="submit" ng-disabled="movieCategoryCreateForm.$invalid" class="button-text block primary" ng-click="vm.create()">@L("Create")</button>
+    </form>
+</div>

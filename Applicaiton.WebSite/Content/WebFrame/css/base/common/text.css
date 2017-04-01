@@ -1,0 +1,50 @@
+﻿/*Weight and italics*/
+.font-ultralight {
+    font-weight: 100 !important; 
+}
+.font-extrathin {
+    font-weight: 200 !important; 
+}
+.font-thin {
+    font-weight: 300 !important; 
+}
+.font-text {
+    font-weight: 400 !important; 
+}
+.font-semibold {
+    font-weight: 600 !important;
+}
+.font-bold {
+    font-weight: 700 !important;
+}
+.font-italic{ 
+    font-style: italic; 
+}
+
+/*Alignment*/
+.text-left {
+    text-align: left; 
+}
+.text-right {
+    text-align: right; 
+}
+.text-center {
+    text-align: center;
+}
+.text-justify { 
+    text-align: justify !important; 
+}
+.text-nowrap { 
+    white-space: nowrap !important;
+}
+
+/*Transformation*/
+.text-lowercase  { text-transform: lowercase !important; }
+.text-uppercase  { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+.ellipsis {
+	text-overflow: ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}

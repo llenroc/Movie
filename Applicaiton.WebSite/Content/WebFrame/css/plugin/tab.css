@@ -1,0 +1,125 @@
+/*tab*/
+.tab{
+}
+.tab>ul.tab-nav-list{
+    margin:0;
+    padding: 0;
+    list-style-type:none;
+    border-bottom:1px solid #169ef4;
+	background: #fff;
+}
+.tab.flex-tab>ul.tab-nav-list{
+    display:-webkit-box;
+    -webkit-box-align:center;
+}
+.tab>ul.tab-nav-list:before{
+    display:table;
+    content: "";
+    line-height: 0;
+}
+.tab>ul.tab-nav-list:after{
+    display:table;
+    clear:both;
+    content: "";
+    line-height: 0;
+}
+.tab>ul.tab-nav-list>li{
+    display:block;
+    float:left;
+    -webkit-user-select:none; 
+	min-width: 10rem;
+}
+.tab.flex-tab>ul.tab-nav-list>li{
+    float:none;
+    -webkit-box-flex:1;
+    background: #fff;
+}
+.tab>ul.tab-nav-list>li:not(:first-child){
+    margin-left:4px;
+}
+.tab>ul.tab-nav-list>li a{
+    display:block;
+    color:#333;
+    -webkit-user-select:none;
+    padding: 0.8rem 2rem;
+	font-size:12px;
+    cursor:pointer;
+    background: #f4f4f4;
+	text-align:center;
+}
+.tab>ul.tab-nav-list>li.actived>a{
+    background-color:#169ef4;
+    color:#fff;
+}
+.tab > .tab-box {
+    position:relative;
+}
+.tab.border > .tab-box {
+    border:2px solid #eee;
+}
+.tab > .tab-box>.tab-page{
+    padding:10px;
+}
+.tab > .tab-box>.tab-page.hide{
+    display:none !important;
+}
+.tab > .tab-box > .tab-page.show {
+}
+.tab.transparent> .tab-box{
+    border:none;
+}
+.tab.transparent>ul.tab-nav-list{
+    background-color:transparent;
+}
+
+.tab.vertical-tab{
+}
+.tab.vertical-tab>.handle{
+    background-color:#000;
+}
+.tab.vertical-tab>.handle>button{
+    display:block;
+}
+.tab.vertical-tab.right>.handle>ul.tab-nav-list{
+    margin-bottom:0;
+    padding:0;
+    margin-right:2px;
+}
+.tab.vertical-tab>.handle>ul.tab-nav-list>li{
+    -webkit-transition: 0.3s;
+    float: none;
+    margin:6px 0 0 0;
+    text-align: center;
+    width: 30px;
+    height: 36px;
+    line-height: 36px;
+    display: block;
+}
+.tab.vertical-tab>.handle>ul.tab-nav-list>li>span{
+    color:#fff;
+    font-size:16px;
+}
+.tab.vertical-tab>.handle>ul.tab-nav-list>li:hover{
+    background-color:#ccc;
+}
+.tab.vertical-tab>.handle>ul.tab-nav-list>li.actived{
+    background-color:#fff;
+}
+.tab.vertical-tab>.handle>ul.tab-nav-list>li:hover>span,
+.tab.vertical-tab>.handle>ul.tab-nav-list>li.actived>span{
+    color:#000;
+}
+.tab.vertical-tab > .tab-box {
+    width:0;
+    border:none;
+    background-color:#fff;
+    position:relative;
+}
+.tab.vertical-tab.right > .tab-box {
+    border-right:none;
+    overflow:hidden;
+}
+.tab.vertical-tab > .tab-box>.tab-page{
+    padding: 10px;
+    border:none;
+}

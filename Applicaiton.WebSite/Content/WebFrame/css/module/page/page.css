@@ -1,0 +1,8 @@
+﻿.page{
+    min-height:100%;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+}
+.page-content{
+    -webkit-box-flex:1;
+}

@@ -1,0 +1,37 @@
+﻿.list-form {
+	border-bottom:1px solid #eee;
+}
+.list-form-list{
+    list-style-type:none;
+    padding-left:0;
+	margin-bottom:0;
+}
+.list-form-list li{
+    background-color: #fff;
+}
+.list-form-list li:not(:last-child){
+    border-bottom:1px solid #eee;
+}
+.list-form-list .form-group{
+    display:-webkit-box;
+    -webkit-box-align:center;
+    margin-bottom:0;
+    padding: 6px 10px;
+}
+.list-form-list .form-group .form-group-key{
+    display:block;
+    width:100px;
+    margin:0;
+    margin-right:10px;
+	font-size:12px;
+}
+.list-form-list .form-group .form-group-block{
+    -webkit-box-flex:1;
+    text-align: right;
+}
+.list-form-list .form-group .form-group-block input{
+    border-color:transparent;
+}
+.list-form-list .form-group .form-group-block .static-text {
+	border-color: transparent;
+}

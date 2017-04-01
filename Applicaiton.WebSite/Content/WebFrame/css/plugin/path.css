@@ -1,0 +1,50 @@
+.path-box{
+    box-shadow: 1px 1px 3px #eee;
+    display:-webkit-box;
+    -webkit-box-align:center;
+}
+.path-box .user-profile.simple{
+    
+}
+.path-box .user-profile.simple .avatar{
+    width:32px;
+    height:32px;
+    border-radius:32px;
+    border:1px solid transparent;
+}
+.path-list{
+    -webkit-box-flex:1;
+    list-style-type:none;
+    padding-left: 0;
+    margin: 0;
+}
+.path-list>li{
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    padding-right: 32px;
+    padding-left: 32px;
+    color: #999;
+    cursor:pointer;
+}
+.path-list>li:hover{
+    color:#0094ff;
+}
+.path-list>li:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -32px;
+    margin-top: -12px;
+    width: 45.2px;
+    height: 45.2px;
+    border-bottom: 1px solid #ddd;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin-y: 100%;
+    -webkit-transform-origin-x: 0;
+}
+.path-list>li.actived{
+    color: #333;
+    font-weight: bold;
+}

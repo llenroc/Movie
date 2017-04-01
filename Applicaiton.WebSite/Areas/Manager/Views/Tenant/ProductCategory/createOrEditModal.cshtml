@@ -1,0 +1,32 @@
+@using Infrastructure.Application.DTO
+<div class="dialog">
+    <div class="header">
+        <div class="container-responsive">
+            <h5 class="title">@L("ProductCategory")</h5>
+            <button class="button-icon button-close">¡Á</button>
+        </div>
+    </div>
+    <div class="body">
+        <div class="container-responsive">
+            <form name="productCategoryCreateOrEditForm" novalidate>
+                <div class="form-group">
+                    <label class="form-group-key">@L("Name")</label>
+                    <div class="form-group-block">
+                        <div class="input-wrapper">
+                            <input type="text" name="name" ng-model="vm.productCategory.name" required>
+                        </div>
+                    </div>
+                    <p class="help-block error" ng-show="productCategoryCreateOrEditForm.name.$error.required">@L("NameIsRequired")</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-responsive">
+            <button type="button" class="button-text button-close">@L("Close")</button>
+            <button type="submit" class="button-text button-ok" ng-click="vm.createOrEdit()" ng-disabled="productCategoryCreateOrEditForm.$invalid">
+                <i class="icon-save"></i> <span>@L("SaveAndClose")</span>
+            </button>
+        </div>
+    </div>
+</div>

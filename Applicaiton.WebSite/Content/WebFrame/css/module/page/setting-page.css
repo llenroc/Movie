@@ -1,0 +1,14 @@
+﻿.setting-page{
+    position:absolute;
+    top:0;
+    right:0;
+    height:100%;
+    z-index:1000;
+    background-color:#fff;
+    box-shadow: 2px 0 5px;
+    -webkit-transform: translateX(100%);
+    -webkit-transition:0.3s;
+}
+.setting-page.show{
+    -webkit-transform: translateX(0);
+}

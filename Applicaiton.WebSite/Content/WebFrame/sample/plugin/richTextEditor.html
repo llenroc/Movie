@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <script src="../../js/lib/jquery/jquery-2.1.1.js"></script>
+
+    <link rel="stylesheet" href="../../css/base/common.css">
+    <link rel="stylesheet" href="../../css/base/button.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/base/code.css">
+    <link rel="stylesheet" href="../../css/base/form.css">
+    <link rel="stylesheet" href="../../css/base/grid.css">
+
+    <link rel="stylesheet" href="../../css/component/example.css">
+
+    <link rel="stylesheet" href="../../css/plugin/dropdown.css">
+
+    <link rel="stylesheet" href="../../css/global/common.css">
+    <link rel="stylesheet" href="../../css/plugin/dropdown.css">
+    <link rel="stylesheet" href="../../css/plugin/popup.css">
+    <link rel="stylesheet" href="../../css/plugin/dialog.css">
+    <link rel="stylesheet" href="../../css/plugin/richTextEditor.css">
+
+    <script src="../../js/lib/base.js"></script>
+    <script src="../../js/lib/string.js"></script>
+    <script src="../../js/lib/function.js"></script>
+    <script src="../../js/global/common.js"></script>
+    <script src="../../js/plugin/dropdown.js"></script>
+    <script src="../../js/plugin/dialog.js"></script>
+    <script src="../../js/plugin/popup.js"></script>
+    <script src="../../js/plugin/richTextEditor.js"></script>
+</head>
+<body>
+    <div class="container-responsive">
+        <div class="example">
+            <div class="sample-editor">
+                test word
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        $(".sample-editor").richTextEditor({
+            buttons: [
+                {
+                    name: 'test', type: 'icon',
+                    handler: function (value) {
+                        var selection = this.getSelection();
+                        var range = selection.getRangeAt(0);
+                        console.log(range.startContainer);
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
+</html>

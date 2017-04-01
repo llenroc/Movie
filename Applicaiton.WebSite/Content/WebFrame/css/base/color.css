@@ -1,0 +1,238 @@
+/*
+ * Metro UI CSS
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT License
+ *
+ * color.css
+ */
+.fg-color-blue {
+    color: #2e8bcc !important;
+}
+.fg-color-blueLight {
+    color: #eff4ff !important;
+}
+.fg-color-blueDark {
+    color: #2b5797 !important;
+}
+.fg-color-green {
+    color: rgb(87, 206, 115); !important;
+}
+.fg-color-greenLight {
+    color: #99b433 !important;
+}
+.fg-color-greenDark {
+    color: #1e7145 !important;
+}
+.fg-color-red {
+    color: #e51400 !important;
+}
+.fg-color-yellow {
+    color: #ffc40d !important;
+}
+.fg-color-orange {
+    color: #e3a21a !important;
+}
+.fg-color-orangeDark {
+    color: #da532c !important;
+}
+.fg-color-pink {
+    color: #e671b8 !important;
+}
+.fg-color-pinkDark {
+    color: #7e3878 !important;
+}
+.fg-color-purple {
+    color: #7b4f9d !important;
+}
+.fg-color-darken {
+    color: #1d1d1d !important;
+}
+.fg-color-lighten {
+    color: #d5e7ec !important;
+}
+.fg-color-white {
+    color: #ffffff !important;
+}
+.fg-color-grayDark {
+    color: #525252 !important;
+}
+.fg-color-alizarin {
+    color: rgb(231, 76, 60) !important;
+}
+
+.bg-color-blue {
+    background-color: #2e8bcc !important;
+}
+.bg-color-blueLight {
+    background-color: #eff4ff !important;
+}
+.bg-color-blueDark {
+    background-color: #2b5797 !important;
+}
+.bg-color-green {
+    background-color: rgb(87, 206, 115); !important;
+}
+.bg-color-greenLight {
+    background-color: #99b433 !important;
+}
+.bg-color-greenDark {
+    background-color: #1e7145 !important;
+}
+.bg-color-red {
+    background-color: #e51400 !important;
+}
+.bg-color-yellow {
+    background-color: #ffc40d !important;
+}
+.bg-color-orange {
+    background-color: #e3a21a !important;
+}
+.bg-color-orangeDark {
+    background-color: #da532c !important;
+}
+.bg-color-pink {
+    background-color: #e671b8 !important;
+}
+.bg-color-pinkDark {
+    background-color: #7e3878 !important;
+}
+.bg-color-purple {
+    background-color: #7b4f9d !important;
+}
+.bg-color-dark{
+    background-color:#333 !important;
+}
+.bg-color-darken {
+    background-color: #1d1d1d !important;
+}
+.bg-color-lighten {
+    background-color: #d5e7ec !important;
+}
+.bg-color-white {
+    background-color: #ffffff !important;
+}
+.bg-color-gray {
+    background-color: #999999 !important;
+}
+.bg-color-grayDark {
+    background-color: #525252 !important;
+}
+.bg-color-alizarin {
+    background-color: rgb(231, 76, 60) !important;
+}
+
+[class*=border-color] {
+    border: 2px solid;
+}
+.border-color-blue {
+    border-color: #2e8bcc !important;
+}
+.border-color-blueLight {
+    border-color: #eff4ff !important;
+}
+.border-color-blueDark {
+    border-color: #2b5797 !important;
+}
+.border-color-green {
+    border-color: rgb(87, 206, 115); !important;
+}
+.border-color-greenLight {
+    border-color: #99b433 !important;
+}
+.border-color-greenDark {
+    border-color: #1e7145 !important;
+}
+.border-color-red {
+    border-color: #e51400 !important;
+}
+.border-color-yellow {
+    border-color: #ffc40d !important;
+}
+.border-color-orange {
+    border-color: #e3a21a !important;
+}
+.border-color-orangeDark {
+    border-color: #da532c !important;
+}
+.border-color-pink {
+    border-color: #e671b8 !important;
+}
+.border-color-pinkDark {
+    border-color: #7e3878 !important;
+}
+.border-color-purple {
+    border-color: #7b4f9d !important;
+}
+.border-color-darken {
+    border-color: #1d1d1d !important;
+}
+.border-color-lighten {
+    border-color: #d5e7ec !important;
+}
+.border-color-white {
+    border-color: #ffffff !important;
+}
+.border-color-grayDark {
+    border-color: #525252 !important;
+}
+.border-color-alizarin {
+    border-color: rgb(231, 76, 60) !important;
+}
+
+*:hover[class=outline-color] {
+    outline: 3px solid;
+}
+.outline-color-blue {
+    outline-color: #2e8bcc !important;
+}
+.outline-color-blueLight {
+    outline-color: #eff4ff !important;
+}
+.outline-color-blueDark {
+    outline-color: #2b5797 !important;
+}
+.outline-color-green {
+    outline-color: rgb(87, 206, 115); !important;
+}
+.outline-color-greenLight {
+    outline-color: #99b433 !important;
+}
+.outline-color-greenDark {
+    outline-color: #1e7145 !important;
+}
+.outline-color-red {
+    outline-color: #e51400 !important;
+}
+.outline-color-yellow {
+    outline-color: #ffc40d !important;
+}
+.outline-color-orange {
+    outline-color: #e3a21a !important;
+}
+.outline-color-orangeDark {
+    outline-color: #da532c !important;
+}
+.outline-color-pink {
+    outline-color: #e671b8 !important;
+}
+.outline-color-pinkDark {
+    outline-color: #7e3878 !important;
+}
+.outline-color-purple {
+    outline-color: #7b4f9d !important;
+}
+.outline-color-darken {
+    outline-color: #1d1d1d !important;
+}
+.outline-color-lighten {
+    outline-color: #d5e7ec !important;
+}
+.outline-color-white {
+    outline-color: #ffffff !important;
+}
+.outline-color-grayDark {
+    outline-color: #525252 !important;
+}
+.outline-color-alizarin {
+    outline-color: rgb(231, 76, 60) !important;
+}

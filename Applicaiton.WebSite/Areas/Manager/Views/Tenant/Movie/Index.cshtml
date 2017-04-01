@@ -1,0 +1,35 @@
+﻿<div ng-controller="app.manager.movie.index as vm">
+    <div class="view-page-head">
+        <h1 class="view-page-title">
+            <span>@L("Movies")</span> <small>@L("MoviesHeaderInfo")</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="column-10">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>@L("Title")</th>
+                        <th>@L("IsCode")</th>
+                        <th>@L("MovieType")</th>
+                        <th>@L("CreationTime")</th>
+                        <th>@L("Actions")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="movie in vm.movies">
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.isCode ? 'Yes' : 'No'}}</td>
+                        <td>{{movie.movieType}}</td>
+                        <td>{{movie.creationTime}}</td>
+                        <td>
+                            <a class="button-text border small" ui-sref="movie.edit({id:movie.id})">@L("Edit")</a>
+                            <a class="button-text danger border small">@L("Delete")</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<a class="button-text primary block" ui-sref="movie.create">@L("Create")</a>

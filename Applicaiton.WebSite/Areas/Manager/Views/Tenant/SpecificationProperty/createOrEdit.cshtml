@@ -1,0 +1,35 @@
+<div ng-controller="app.manager.specificationProperty.createOrEdit as vm">
+    <form name="specificationPropertyCreateForm" novalidate>
+        <div class="column-8">
+            <div class="form-group">
+                <label class="form-group-key">@L("Name")</label>
+                <div class="form-group-block">
+                    <div class="input-wrapper">
+                        <input type="text" name="name" ng-model="vm.specificationProperty.name" required>
+                    </div>
+                </div>
+                <p class="help-block error" ng-show="specificationPropertyCreateForm.name.$error.required">@L("NameIsRequired")</p>
+            </div>
+            <div class="form-group">
+                <label class="form-group-key">@L("Type")</label>
+                <div class="form-group-block">
+                    <div class="input-wrapper">
+                        <select class="block" ng-model="vm.specificationProperty.type"
+                                ng-options="specificationPropertyType.value as specificationPropertyType.name for specificationPropertyType in vm.specificationPropertyTypes"></select>
+                    </div>
+                </div>
+                <p class="help-block error" ng-show="specificationPropertyCreateForm.type.$error.required">@L("TypeIsRequired")</p>
+            </div>
+            <div class="form-group">
+                <label class="form-group-key">@L("Description")</label>
+                <div class="form-group-block">
+                    <div class="input-wrapper">
+                        <textarea class="block" ng-model="vm.specificationProperty.description"></textarea>
+                    </div>
+                </div>
+                <p class="help-block error" ng-show="specificationPropertyCreateForm.name.$error.required">@L("DescriptionIsRequired")</p>
+            </div>
+        </div>
+        <button class="button-text primary block" ng-click="vm.createOrEdit()" ng-disabled="specificationPropertyCreateForm.$invalid"><i class="icon-save"></i>@L("Save")</button>
+    </form>
+</div>
